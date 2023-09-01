@@ -217,21 +217,21 @@ app_license = "MIT"
 # ]
 
 fixtures = [
-    {"dt":"Custom Field","fillters":[
+    {"dt":"Custom Field","filters":[
         [
             "dt","in",[
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
-                "Income Tax Slab","Employee Declaration","Appraisal Template","Appraisal",
+                "Income Tax Slab","Appraisal Template","Appraisal",
                 "Shift Type","Holiday List"
             ]
         ]
     ]
 },
-{"dt":"Property Setter","fillters":[
+{"dt":"Property Setter","filters":[
         [
             "doc_type","in",[
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
-                "Income Tax Slab","Employee Declaration","Appraisal Template","Appraisal",
+                "Income Tax Slab","Appraisal Template","Appraisal",
                 "Shift Type","Holiday List"
             ]
         ]
