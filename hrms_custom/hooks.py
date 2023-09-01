@@ -215,3 +215,80 @@ app_license = "MIT"
 # auth_hooks = [
 #	"hrms_custom.auth.validate"
 # ]
+
+fixtures = [
+    {"dt":"Custom Field","fillters":[
+        [
+            "dt","in",[
+                "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
+                "Income Tax Slab","Employee Declaration","Appraisal Template","Appraisal",
+                "Shift Type","Holiday List"
+            ]
+        ]
+    ]
+},
+{"dt":"Property Setter","fillters":[
+        [
+            "doc_type","in",[
+                "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
+                "Income Tax Slab","Employee Declaration","Appraisal Template","Appraisal",
+                "Shift Type","Holiday List"
+            ]
+        ]
+    ]
+},
+{"dt": "Holiday List", "filters": [
+			[
+				"name", "in", [
+					"2023-Sat-Sun","2023-Saturday","2023-Friday","2023-Thursday","2023-Wednesday",
+                    "2023-Tuesday","2023-Monday","2023-Sunday","2023",
+				]
+			]
+    	]},
+        {"dt": "Leave Type", "filters": [
+			[
+				"name", "in", [
+					"Privilege Leave","Corporate Staff - PL","Plant Staff - PL","Compensatory Off",
+                    "Worker - CL","Worker - PL","SL - Apprentice Employee","CL - Apprentice Employee",
+                    "CL - Trainee Employee","ESIC",
+				]
+			]
+    	]},
+        {"dt": "Shift Type", "filters": [
+			[
+				"name", "in", [
+					"CMS","NS","FSS","FFS","TS","SS","FS","CG","FG",
+				]
+			]
+    	]},
+        {"dt": "Salary Structure", "filters": [
+			[
+				"name", "in", [
+					"Staff Test 1","Worker Test 3","Contractual Final",
+				]
+			]
+    	]},
+         {"dt": "Income Tax Slab", "filters": [
+			[
+				"name", "in", [
+					"New Regime Individual","Old Regime Super Senior Citizen","Old Regime Individual","Old Regime Senior Citizen",
+				]
+			]
+    	]},
+        {"dt": "Salary Component", "filters": [
+			[
+				"name", "in", [
+					"Arrear Basic","Arrear PF","Arrear Stipend","Arrear HRA","Arrear Conveyance","Arrear Personal Allowance",
+                    "Arrear 5S Allowance","Arrear Education Allowance","Arrear Washing Allowance","Arrear ESIC","Employer ESIC",
+                    "ESIC","Employer Pension","5S Allowance","Attendance Allowance","LWF","PF Basic","Employer LWF","PF Contribution",
+                    "Professional Tax","Personal Allowance","HRA","Annual Variable Pay","Bonus","Variable Pay","Other Earnings",
+                    "Incentive","Production Allowance","Overtime","HRA Static","Basic Static","Education Allowance Static",
+                    "Washing Allowance Static","Personal Allowance Static","Gate Pass Hrs","Gate Pass","Employer PF","Gross",
+                    "Gratuity","Conveyance Static Value","5S Allowance Static Value","Basic","Head","Leave Encashment","Provident Fund"
+                    ,"Conveyance","Education Allowance","Washing Allowance","Stipend","Deputation Allowance","Notice Pay","Additional Tax",
+                    "Other Deduction","GSLI","LIC","Notice Recovery","Personal Loan","Salary Advance","Other",
+				]
+			]
+    	]},
+
+]
