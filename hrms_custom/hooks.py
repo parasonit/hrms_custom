@@ -106,6 +106,10 @@ app_license = "MIT"
 #	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+from hrms.hr.doctype.shift_type.shift_type import ShiftType
+from hrms_custom.overiders.shift_attendance import process_auto_attendance
+ShiftType.process_auto_attendance = process_auto_attendance
+
 # DocType Class
 # ---------------
 # Override standard doctype classes
@@ -119,33 +123,39 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# 	"*": {
+# 		"on_update": "method",
+# 		"on_cancel": "method",
+# 		"on_trash": "method"
+# 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"hrms_custom.tasks.all"
-#	],
-#	"daily": [
-#		"hrms_custom.tasks.daily"
-#	],
-#	"hourly": [
-#		"hrms_custom.tasks.hourly"
-#	],
-#	"weekly": [
-#		"hrms_custom.tasks.weekly"
-#	],
-#	"monthly": [
-#		"hrms_custom.tasks.monthly"
-#	],
-# }
+
+scheduler_events = {
+    # "cron": {
+	# 	"1 * * * *": [
+	# 		"hrms_custom.overiders.checkin_sync.record_transactions",
+	# 	],
+	# },
+	# "all": [
+	# 	"hrms_custom.tasks.all"
+	# ],
+	# "daily": [
+	# 	"hrms_custom.tasks.daily"
+	# ],
+	"hourly_long": [
+		"hrms_custom.overiders.checkin_sync.record_transactions"
+	],
+	# "weekly": [
+	# 	"hrms_custom.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"hrms_custom.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
@@ -290,5 +300,4 @@ fixtures = [
 				]
 			]
     	]},
-
 ]
