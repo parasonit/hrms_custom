@@ -106,7 +106,7 @@ app_license = "MIT"
 #	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
-from hrms.hr.doctype.shift_type.shift_type import ShiftType
+from hrms.hrms.hr.doctype.shift_type.shift_type import ShiftType
 from hrms_custom.overiders.shift_attendance import process_auto_attendance
 ShiftType.process_auto_attendance = process_auto_attendance
 
