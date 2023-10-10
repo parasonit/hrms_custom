@@ -119,7 +119,7 @@ ShiftType.process_auto_attendance = process_auto_attendance
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Payroll Entry": "hrms_custom.overiders.payroll_filters.PayrollEntry"
+	"Payroll Entry": "hrms_custom.overiders.payroll_entry.PayrollEntry"
 }
 
 # Document Events
