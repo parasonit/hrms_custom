@@ -2,24 +2,17 @@ import itertools
 from datetime import datetime, timedelta
 
 import frappe
-from frappe.model.document import Document
-from frappe.utils import cint, get_datetime, get_time, getdate
+from frappe import _
+from frappe.utils import cint
 
-from erpnext.setup.doctype.employee.employee import get_holiday_list_for_employee
-from erpnext.setup.doctype.holiday_list.holiday_list import is_holiday
 
-from hrms.hr.doctype.attendance.attendance import mark_attendance
 from hrms.hr.doctype.employee_checkin.employee_checkin import (
 	calculate_working_hours,
 	mark_attendance_and_link_log,
 )
-from hrms.hr.doctype.shift_assignment.shift_assignment import get_employee_shift, get_shift_details
-from hrms.utils import get_date_range
-from hrms.utils.holiday_list import get_holiday_dates_between
 
+@frappe.whitelist()
 def process_auto_attendance(self):
-    frappe.throw("working")
-    return
     if (
         not cint(self.enable_auto_attendance)
         or not self.process_attendance_after
@@ -60,3 +53,133 @@ def process_auto_attendance(self):
 
     for employee in self.get_assigned_employees(self.process_attendance_after, True):
         self.mark_absent_for_dates_with_no_attendance(employee)
+
+def mark_attendance_and_link_log(
+	logs,
+	attendance_status,
+	attendance_date,
+	working_hours=None,
+	late_entry=False,
+	early_exit=False,
+	in_time=None,
+	out_time=None,
+	shift=None,
+):
+	"""Creates an attendance and links the attendance to the Employee Checkin.
+	Note: If attendance is already present for the given date, the logs are marked as skipped and no exception is thrown.
+
+	:param logs: The List of 'Employee Checkin'.
+	:param attendance_status: Attendance status to be marked. One of: (Present, Absent, Half Day, Skip). Note: 'On Leave' is not supported by this function.
+	:param attendance_date: Date of the attendance to be created.
+	:param working_hours: (optional)Number of working hours for the given date.
+	"""
+	log_names = [x.name for x in logs]
+	employee = logs[0].employee
+
+	if attendance_status == "Skip":
+		skip_attendance_in_checkins(log_names)
+		return None
+
+	elif attendance_status in ("Present", "Absent", "Half Day"):
+		try:
+			frappe.db.savepoint("attendance_creation")
+			attendance = frappe.new_doc("Attendance")
+			attendance.update(
+				{
+					"doctype": "Attendance",
+					"employee": employee,
+					"attendance_date": attendance_date,
+					"status": attendance_status,
+					"working_hours": working_hours,
+					"shift": shift,
+					"late_entry": late_entry,
+					"early_exit": early_exit,
+					"in_time": in_time,
+					"out_time": out_time,
+				}
+			)
+			attendance.save() 
+			get_overtime(attendance)
+			attendance.save()
+
+			if attendance.overtime_hours <= 0 :
+				attendance.submit()
+				
+			if attendance_status == "Absent":
+				attendance.add_comment(
+					text=_("Employee was marked Absent for not meeting the working hours threshold.")
+				)
+
+			update_attendance_in_checkins(log_names, attendance.name)
+			return attendance
+
+		except frappe.ValidationError as e:
+			handle_attendance_exception(log_names, e)
+
+	else:
+		frappe.throw(_("{} is an invalid Attendance Status.").format(attendance_status))
+		
+def handle_attendance_exception(log_names: list, error_message: str):
+	frappe.db.rollback(save_point="attendance_creation")
+	frappe.clear_messages()
+	skip_attendance_in_checkins(log_names)
+	add_comment_in_checkins(log_names, error_message)
+
+def add_comment_in_checkins(log_names: list, error_message: str):
+	text = "{0}<br>{1}".format(frappe.bold(_("Reason for skipping auto attendance:")), error_message)
+
+	for name in log_names:
+		frappe.get_doc(
+			{
+				"doctype": "Comment",
+				"comment_type": "Comment",
+				"reference_doctype": "Employee Checkin",
+				"reference_name": name,
+				"content": text,
+			}
+		).insert(ignore_permissions=True)
+
+
+def skip_attendance_in_checkins(log_names: list):
+	EmployeeCheckin = frappe.qb.DocType("Employee Checkin")
+	(
+		frappe.qb.update(EmployeeCheckin)
+		.set("skip_auto_attendance", 1)
+		.where(EmployeeCheckin.name.isin(log_names))
+	).run()
+
+
+def update_attendance_in_checkins(log_names: list, attendance_id: str):
+	EmployeeCheckin = frappe.qb.DocType("Employee Checkin")
+	(
+		frappe.qb.update(EmployeeCheckin)
+		.set("attendance", attendance_id)
+		.where(EmployeeCheckin.name.isin(log_names))
+	).run()
+
+def get_overtime(doc):
+	if doc.shift and doc.working_hours:
+		
+		if doc.employment_type in ['Worker','Contractual','Staff']:
+			
+			shift = frappe.get_doc('Shift Type',doc.shift)
+			
+			normal_working_hours = frappe.utils.time_diff_in_hours( shift.end_time, shift.start_time)
+			
+			overtime_hours = round(doc.working_hours - normal_working_hours, 2)
+			
+			if 0.01 <= (overtime_hours - int(overtime_hours)) < 0.5:
+				overtime_hours = int(overtime_hours) + 0.5
+			elif 0.5 <= (overtime_hours - int(overtime_hours)) < 1:
+				overtime_hours = int(overtime_hours) + 1
+			
+			overtime_hours = overtime_hours if overtime_hours <= 8 else 8
+
+			# frappe.throw(f"{overtime_hours}")
+			
+			if doc.employment_type == 'Staff' and overtime_hours >= 2:
+				doc.overtime_hours = overtime_hours
+			elif doc.employment_type in ['Worker','Contractual'] and overtime_hours >= 1:
+				doc.overtime_hours = overtime_hours
+			else:
+				doc.overtime_hours = 0

@@ -110,25 +110,27 @@ from hrms.hr.doctype.shift_type.shift_type import ShiftType
 from hrms_custom.overiders.shift_attendance import process_auto_attendance
 ShiftType.process_auto_attendance = process_auto_attendance
 
+# from hrms.payroll.doctype.payroll_entry.payroll_entry import PayrollEntry
+# from hrms_custom.overiders.payroll_filters import get_emp_list
+# PayrollEntry.get_emp_list = get_emp_list
+
 # DocType Class
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Payroll Entry": "hrms_custom.overiders.payroll_filters.PayrollEntry"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Salary Slip": {
+		"after_insert": "hrms_custom.overiders.salary_slip.salary_slip",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
