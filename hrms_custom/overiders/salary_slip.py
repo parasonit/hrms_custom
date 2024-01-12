@@ -7,7 +7,8 @@ from erpnext.setup.doctype.employee.employee import (
 
 @frappe.whitelist()
 def salary_slip(doc,method):
-    
+    doc.paid_days = doc.present_days + doc.leave_with_pay + doc.weekly_off + doc.paid_holidays
+
     def get_holidays_for_employee(
         employee, start_date, end_date, raise_exception=True):
         """Get Holidays for a given employee
@@ -251,17 +252,18 @@ def salary_slip(doc,method):
         ignore_mandatory=True, # insert even if mandatory fields are not set 
         )
 
+    doc.paid_days = doc.present_days + doc.leave_with_pay + doc.weekly_off + doc.paid_holidays
     if doc.leave_type_group == 'Corporate Staff':
         leave_number = 2
         if doc.absent_days > 0:
-            leave_number = round((doc.payment_days*leave_number/doc.total_working_days),2)
+            leave_number = round((doc.paid_days*leave_number/doc.actual_day),2)
         
         create_allocate_leave(doc,"Corporate Staff - PL",leave_number)
         
     elif doc.leave_type_group == 'Plant staff':
         leave_number = 2.5
         if doc.absent_days > 0:
-            leave_number = round((doc.payment_days*leave_number/doc.total_working_days),2)
+            leave_number = round((doc.paid_days*leave_number/doc.actual_day),2)
         create_allocate_leave(doc,"Plant Staff - PL",leave_number)
 
     doc.save()

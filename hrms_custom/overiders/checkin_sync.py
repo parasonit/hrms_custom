@@ -10,7 +10,8 @@ import os
 
 # @frappe.whitelist()
 def record_transactions():
-    
+    frappe.log_error("record_transactions", "Schedular Working")
+
     last_sync_datetime = frappe.get_last_doc('Employee Checkin').time
 
     # SQL Server Connection

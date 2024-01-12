@@ -110,6 +110,10 @@ from hrms.hr.doctype.shift_type.shift_type import ShiftType
 from hrms_custom.overiders.shift_attendance import process_auto_attendance
 ShiftType.process_auto_attendance = process_auto_attendance
 
+#override shift get_attendance
+from hrms_custom.overiders.shift_type import custom_get_attendance
+ShiftType.get_attendance = custom_get_attendance
+
 # from hrms.payroll.doctype.payroll_entry.payroll_entry import PayrollEntry
 # from hrms_custom.overiders.payroll_filters import get_emp_list
 # PayrollEntry.get_emp_list = get_emp_list
@@ -234,7 +238,7 @@ fixtures = [
             "dt","in",[
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
                 "Income Tax Slab","Appraisal Template","Appraisal",
-                "Shift Type","Holiday List"
+                "Shift Type","Holiday List", "Attendance Request-custom_approver", "Attendance Request-custom_approver_name"
             ]
         ]
     ]
