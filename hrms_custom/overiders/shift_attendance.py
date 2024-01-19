@@ -1,6 +1,6 @@
 import itertools
 from datetime import datetime, timedelta
-from apps.hrms_custom.hrms_custom.utils import is_holiday
+from hrms_custom.utils import is_holiday
 
 import frappe
 from frappe import _
@@ -100,14 +100,25 @@ def mark_attendance_and_link_log(
 			)
 			extra_work_benefits = frappe.db.get_value('Employee', employee, 'extra_work_benefits')
 			#validate comp-off and OT
-			if is_holiday(employee=employee, date = attendance_date) and extra_work_benefits == "Overtime":
-				attendance.update({
-					"working_hours": working_hours,
-					"overtime_hours": working_hours
+			try:
+				frappe.log_error("is_holiday", {
+					'employee': employee,
+					'attendance_date': attendance_date,
+					'attendance_date_type': type(attendance_date),
+					'extra_work_benefits': extra_work_benefits,
+					'is_holiday': is_holiday(employee=employee, date = attendance_date)
 				})
-			attendance.save() 
+				if is_holiday(employee=employee, date = attendance_date) and extra_work_benefits == "Overtime":
+					frappe.log_error("overtime_hours", working_hours)
+					attendance.update({
+						"working_hours": working_hours,
+						"overtime_hours": working_hours
+					})
+				attendance.save() 
+			except Exception as e:
+				frappe.log_error("overtime_attendance", e)
 			
-			if extra_work_benefits != 'Comp-Off':
+			if extra_work_benefits != 'Comp-Off' and not is_holiday(employee=employee, date=attendance_date):
 				get_overtime(attendance)
 				attendance.save()
 

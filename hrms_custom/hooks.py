@@ -133,6 +133,9 @@ override_doctype_class = {
 doc_events = {
 	"Salary Slip": {
 		"after_insert": "hrms_custom.overiders.salary_slip.salary_slip",
+	},
+    "Shift Request": {
+        "on_submit": "hrms_custom.doc_events.update_attendance"
 	}
 }
 

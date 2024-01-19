@@ -6,7 +6,7 @@ def is_holiday(employee=None, date=None):
         holiday_list = frappe.db.get_value('Employee', employee, 'holiday_list')
         if holiday_list:
             return bool(
-                frappe.db.exists("Holiday", {"parent": holiday_list, "holiday_date": date}, cache=True)
+                frappe.db.exists("Holiday", {"parent": holiday_list, "holiday_date": date})
             )
         else:
             return False
