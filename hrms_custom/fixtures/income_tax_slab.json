@@ -1,1 +1,407 @@
+<<<<<<< HEAD
 []
+=======
+[
+ {
+  "allow_tax_exemption": 1,
+  "amended_from": null,
+  "company": "Parason Machinery India Pvt Ltd",
+  "currency": "INR",
+  "disabled": 0,
+  "docstatus": 1,
+  "doctype": "Income Tax Slab",
+  "effective_from": "2023-04-01",
+  "modified": "2023-08-05 12:34:18.175512",
+  "name": "Old Regime Individual",
+  "other_taxes_and_charges": [
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 10000000.0,
+    "min_taxable_income": 5000000.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 10.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 20000000.0,
+    "min_taxable_income": 10000001.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 15.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 50000000.0,
+    "min_taxable_income": 20000001.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 25.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 50000001.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 37.0
+   },
+   {
+    "description": "Education Cess Charge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 250001.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 4.0
+   }
+  ],
+  "slabs": [
+   {
+    "condition": null,
+    "from_amount": 1.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 0.0,
+    "to_amount": 250000.0
+   },
+   {
+    "condition": "",
+    "from_amount": 250001.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 5.0,
+    "to_amount": 500000.0
+   },
+   {
+    "condition": null,
+    "from_amount": 500001.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 20.0,
+    "to_amount": 1000000.0
+   },
+   {
+    "condition": "",
+    "from_amount": 1000001.0,
+    "parent": "Old Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 30.0,
+    "to_amount": 200000000.0
+   }
+  ],
+  "standard_tax_exemption_amount": 50000.0
+ },
+ {
+  "allow_tax_exemption": 1,
+  "amended_from": null,
+  "company": "Parason Machinery India Pvt Ltd",
+  "currency": "INR",
+  "disabled": 0,
+  "docstatus": 1,
+  "doctype": "Income Tax Slab",
+  "effective_from": "2023-04-01",
+  "modified": "2023-08-05 12:34:05.313534",
+  "name": "Old Regime Senior Citizen",
+  "other_taxes_and_charges": [
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 10000000.0,
+    "min_taxable_income": 5000000.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 10.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 20000000.0,
+    "min_taxable_income": 10000001.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 15.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 50000000.0,
+    "min_taxable_income": 20000001.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 25.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 50000001.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 37.0
+   },
+   {
+    "description": "Education Cess Charge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 250001.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 4.0
+   }
+  ],
+  "slabs": [
+   {
+    "condition": "",
+    "from_amount": 1.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 0.0,
+    "to_amount": 300000.0
+   },
+   {
+    "condition": "",
+    "from_amount": 300001.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 5.0,
+    "to_amount": 500000.0
+   },
+   {
+    "condition": null,
+    "from_amount": 500001.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 20.0,
+    "to_amount": 1000000.0
+   },
+   {
+    "condition": "",
+    "from_amount": 1000001.0,
+    "parent": "Old Regime Senior Citizen",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 30.0,
+    "to_amount": 200000000.0
+   }
+  ],
+  "standard_tax_exemption_amount": 50000.0
+ },
+ {
+  "allow_tax_exemption": 1,
+  "amended_from": null,
+  "company": "Parason Machinery India Pvt Ltd",
+  "currency": "INR",
+  "disabled": 0,
+  "docstatus": 1,
+  "doctype": "Income Tax Slab",
+  "effective_from": "2023-04-01",
+  "modified": "2023-08-05 12:45:55.673000",
+  "name": "Old Regime Super Senior Citizen",
+  "other_taxes_and_charges": [
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 10000000.0,
+    "min_taxable_income": 5000000.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 10.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 20000000.0,
+    "min_taxable_income": 10000001.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 15.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 50000000.0,
+    "min_taxable_income": 20000001.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 25.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 50000001.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 37.0
+   },
+   {
+    "description": "Education Cess Charge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 250001.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 4.0
+   }
+  ],
+  "slabs": [
+   {
+    "condition": "",
+    "from_amount": 1.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 0.0,
+    "to_amount": 500000.0
+   },
+   {
+    "condition": null,
+    "from_amount": 500001.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 20.0,
+    "to_amount": 1000000.0
+   },
+   {
+    "condition": "",
+    "from_amount": 1000001.0,
+    "parent": "Old Regime Super Senior Citizen",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 30.0,
+    "to_amount": 200000000.0
+   }
+  ],
+  "standard_tax_exemption_amount": 50000.0
+ },
+ {
+  "allow_tax_exemption": 1,
+  "amended_from": null,
+  "company": "Parason Machinery India Pvt Ltd",
+  "currency": "INR",
+  "disabled": 0,
+  "docstatus": 1,
+  "doctype": "Income Tax Slab",
+  "effective_from": "2023-04-01",
+  "modified": "2023-08-31 12:24:54.375160",
+  "name": "New Regime Individual",
+  "other_taxes_and_charges": [
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 10000000.0,
+    "min_taxable_income": 5000000.0,
+    "parent": "New Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 10.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 20000000.0,
+    "min_taxable_income": 10000001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 15.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 50000000.0,
+    "min_taxable_income": 20000001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 25.0
+   },
+   {
+    "description": "Surcharge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 50000001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 37.0
+   },
+   {
+    "description": "Education Cess Charge",
+    "max_taxable_income": 200000000.0,
+    "min_taxable_income": 250001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "other_taxes_and_charges",
+    "parenttype": "Income Tax Slab",
+    "percent": 4.0
+   }
+  ],
+  "slabs": [
+   {
+    "condition": null,
+    "from_amount": 1.0,
+    "parent": "New Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 0.0,
+    "to_amount": 300000.0
+   },
+   {
+    "condition": "",
+    "from_amount": 300001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 5.0,
+    "to_amount": 600000.0
+   },
+   {
+    "condition": null,
+    "from_amount": 600001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 10.0,
+    "to_amount": 900000.0
+   },
+   {
+    "condition": "",
+    "from_amount": 900001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 15.0,
+    "to_amount": 1200000.0
+   },
+   {
+    "condition": null,
+    "from_amount": 1200001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 20.0,
+    "to_amount": 1500000.0
+   },
+   {
+    "condition": null,
+    "from_amount": 1500001.0,
+    "parent": "New Regime Individual",
+    "parentfield": "slabs",
+    "parenttype": "Income Tax Slab",
+    "percent_deduction": 30.0,
+    "to_amount": 200000000.0
+   }
+  ],
+  "standard_tax_exemption_amount": 50000.0
+ }
+]
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb

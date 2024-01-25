@@ -9,6 +9,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": null,
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 30,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 1,
@@ -20,12 +24,18 @@
   "is_ppl": 0,
   "leave_type_name": "Compensatory Off",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 0.0,
   "maximum_carry_forwarded_leaves": 0.0,
   "modified": "2023-09-01 16:35:17.910730",
   "name": "Compensatory Off",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -38,6 +48,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": "Leave Encashment",
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 1,
@@ -49,12 +63,18 @@
   "is_ppl": 0,
   "leave_type_name": "Privilege Leave",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 0.0,
   "maximum_carry_forwarded_leaves": 0.0,
   "modified": "2023-08-18 13:45:43.164072",
   "name": "Privilege Leave",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -67,6 +87,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": null,
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -78,12 +102,18 @@
   "is_ppl": 0,
   "leave_type_name": "ESIC",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 0.0,
   "maximum_carry_forwarded_leaves": 0.0,
   "modified": "2023-08-05 16:51:32.290295",
   "name": "ESIC",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -96,6 +126,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": null,
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -107,12 +141,18 @@
   "is_ppl": 0,
   "leave_type_name": "CL - Trainee Employee",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 10.0,
   "maximum_carry_forwarded_leaves": 10.0,
   "modified": "2023-08-11 16:46:58.705402",
   "name": "CL - Trainee Employee",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -125,6 +165,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": null,
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -136,12 +180,18 @@
   "is_ppl": 0,
   "leave_type_name": "CL - Apprentice Employee",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 12.0,
   "maximum_carry_forwarded_leaves": 12.0,
   "modified": "2023-08-11 16:48:24.303055",
   "name": "CL - Apprentice Employee",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -154,6 +204,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": null,
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -165,12 +219,18 @@
   "is_ppl": 0,
   "leave_type_name": "SL - Apprentice Employee",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 15.0,
   "maximum_carry_forwarded_leaves": 15.0,
   "modified": "2023-08-11 16:49:37.679469",
   "name": "SL - Apprentice Employee",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -183,6 +243,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": null,
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -194,12 +258,18 @@
   "is_ppl": 0,
   "leave_type_name": "Worker - PL",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 0.0,
   "maximum_carry_forwarded_leaves": 60.0,
   "modified": "2023-08-14 15:15:48.017852",
   "name": "Worker - PL",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -212,6 +282,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": null,
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -223,12 +297,18 @@
   "is_ppl": 0,
   "leave_type_name": "Worker - CL",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 7.0,
   "maximum_carry_forwarded_leaves": 0.0,
   "modified": "2023-08-14 15:16:39.094843",
   "name": "Worker - CL",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -241,6 +321,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": "Leave Encashment",
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -252,12 +336,18 @@
   "is_ppl": 0,
   "leave_type_name": "Corporate Staff - PL",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 0.0,
   "maximum_carry_forwarded_leaves": 60.0,
   "modified": "2023-08-18 13:30:17.620967",
   "name": "Corporate Staff - PL",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  },
  {
@@ -270,6 +360,10 @@
   "doctype": "Leave Type",
   "earned_leave_frequency": "Monthly",
   "earning_component": "Leave Encashment",
+<<<<<<< HEAD
+=======
+  "encashment_threshold_days": 0,
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "expire_carry_forwarded_leaves_after_days": 0,
   "fraction_of_daily_salary_per_leave": 0.0,
   "include_holiday": 0,
@@ -281,12 +375,18 @@
   "is_ppl": 0,
   "leave_type_name": "Plant Staff - PL",
   "max_continuous_days_allowed": 0,
+<<<<<<< HEAD
   "max_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "max_leaves_allowed": 0.0,
   "maximum_carry_forwarded_leaves": 60.0,
   "modified": "2023-08-14 17:55:06.134392",
   "name": "Plant Staff - PL",
+<<<<<<< HEAD
   "non_encashable_leaves": 0,
+=======
+>>>>>>> c7f13c95ad321b9cffb768c6f2bc8fb45cdef1eb
   "rounding": "0.5"
  }
 ]
