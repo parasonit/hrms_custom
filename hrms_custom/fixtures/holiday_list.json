@@ -1,1 +1,3842 @@
-[]
+[
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023",
+  "holidays": [
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   }
+  ],
+  "modified": "2023-08-29 16:31:39.624581",
+  "name": "2023",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 6,
+  "weekly_off": ""
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Sunday",
+  "holidays": [
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-01",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-08",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-15",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-22",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-29",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-05",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-12",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-19",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-26",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-05",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-12",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-19",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-26",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-02",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-09",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-16",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-23",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-30",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-07",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-14",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-21",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-28",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-04",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-11",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-18",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-25",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-02",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-09",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-16",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-23",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-30",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-06",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-13",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-20",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-27",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-03",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-10",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-17",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-24",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-01",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-08",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-15",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-22",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-29",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-05",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-12",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-19",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-26",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-03",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-10",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-17",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-24",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-31",
+    "parent": "2023-Sunday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-08-29 18:12:26.582987",
+  "name": "2023-Sunday",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 59,
+  "weekly_off": "Sunday"
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Monday",
+  "holidays": [
+   {
+    "description": "Monday",
+    "holiday_date": "2023-01-02",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-01-09",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-01-16",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-01-23",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-01-30",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-02-06",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-02-13",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-02-20",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-02-27",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-03-06",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-03-13",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-03-20",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-03-27",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-04-03",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-04-10",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-04-17",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-04-24",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-05-08",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-05-15",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-05-22",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-05-29",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-06-05",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-06-12",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-06-19",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-06-26",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-07-03",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-07-10",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-07-17",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-07-24",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-07-31",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-08-07",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-08-14",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-08-21",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-08-28",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-09-04",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-09-11",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-09-18",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-09-25",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-10-02",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-10-09",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-10-16",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-10-23",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-10-30",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-11-06",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-11-20",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-11-27",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-12-04",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-12-11",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-12-18",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Monday",
+    "holiday_date": "2023-12-25",
+    "parent": "2023-Monday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-08-29 18:12:52.519565",
+  "name": "2023-Monday",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 56,
+  "weekly_off": "Monday"
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Tuesday",
+  "holidays": [
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-01-03",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-01-10",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-01-17",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-01-24",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-01-31",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-02-07",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-02-14",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-02-21",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-02-28",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-03-07",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-03-14",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-03-21",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-03-28",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-04-04",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-04-11",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-04-18",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-04-25",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-05-02",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-05-09",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-05-16",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-05-23",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-05-30",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-06-06",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-06-13",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-06-20",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-06-27",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-07-04",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-07-11",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-07-18",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-07-25",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-08-01",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-08-08",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-08-22",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-08-29",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-09-05",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-09-12",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-09-19",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-09-26",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-10-03",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-10-10",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-10-17",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-10-31",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-11-07",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-11-21",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-11-28",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-12-05",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-12-12",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-12-19",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Tuesday",
+    "holiday_date": "2023-12-26",
+    "parent": "2023-Tuesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-08-29 18:13:16.894227",
+  "name": "2023-Tuesday",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 55,
+  "weekly_off": "Tuesday"
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Wednesday",
+  "holidays": [
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-01-04",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-01-11",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-01-18",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-01-25",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-02-01",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-02-08",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-02-15",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-02-22",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-03-01",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-03-08",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-03-15",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-03-22",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-03-29",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-04-05",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-04-12",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-04-19",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-04-26",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-05-03",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-05-10",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-05-17",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-05-24",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-05-31",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-06-07",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-06-14",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-06-21",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-06-28",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-07-05",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-07-12",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-07-19",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-07-26",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-08-02",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-08-09",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-08-16",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-08-23",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-08-30",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-09-06",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-09-13",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-09-20",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-09-27",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-10-04",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-10-11",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-10-18",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-10-25",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-11-01",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-11-08",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-11-15",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-11-22",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-11-29",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-12-06",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-12-13",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-12-20",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Wednesday",
+    "holiday_date": "2023-12-27",
+    "parent": "2023-Wednesday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-08-29 18:13:45.254771",
+  "name": "2023-Wednesday",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 58,
+  "weekly_off": "Wednesday"
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Thursday",
+  "holidays": [
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-01-05",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-01-12",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-01-19",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-01-26",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-02-02",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-02-09",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-02-16",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-02-23",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-03-02",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-03-09",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-03-16",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-03-23",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-03-30",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-04-06",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-04-13",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-04-20",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-04-27",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-05-04",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-05-11",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-05-18",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-05-25",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-06-01",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-06-08",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-06-15",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-06-22",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-06-29",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-07-06",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-07-13",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-07-20",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-07-27",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-08-03",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-08-10",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-08-17",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-08-24",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-08-31",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-09-07",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-09-14",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-09-21",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-10-05",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-10-12",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-10-19",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-10-26",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-11-02",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-11-09",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-11-16",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-11-23",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-11-30",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-12-07",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-12-14",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-12-21",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Thursday",
+    "holiday_date": "2023-12-28",
+    "parent": "2023-Thursday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-08-29 18:14:04.731483",
+  "name": "2023-Thursday",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 57,
+  "weekly_off": "Thursday"
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Friday",
+  "holidays": [
+   {
+    "description": "Friday",
+    "holiday_date": "2023-01-06",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-01-13",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-01-20",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-01-27",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-02-03",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-02-10",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-02-17",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-02-24",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-03-03",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-03-10",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-03-17",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-03-24",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-03-31",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-04-07",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-04-14",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-04-21",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-04-28",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-05-05",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-05-12",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-05-19",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-05-26",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-06-02",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-06-09",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-06-16",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-06-23",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-06-30",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-07-07",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-07-14",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-07-21",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-07-28",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-08-04",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-08-11",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-08-18",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-08-25",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-09-01",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-09-08",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-09-15",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-09-22",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-09-29",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-10-06",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-10-13",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-10-20",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-10-27",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-11-03",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-11-10",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-11-17",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-11-24",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-12-01",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-12-08",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-12-15",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-12-22",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Friday",
+    "holiday_date": "2023-12-29",
+    "parent": "2023-Friday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-08-29 18:14:28.677926",
+  "name": "2023-Friday",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 58,
+  "weekly_off": "Friday"
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Saturday",
+  "holidays": [
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-01-14",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-01-28",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-02-11",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-02-25",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-03-11",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-03-25",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-04-08",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-04-22",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-05-13",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-05-27",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-06-10",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-06-24",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-07-08",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-07-22",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-08-12",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-08-26",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-09-09",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-09-23",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-10-14",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-10-28",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-11-11",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-11-25",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-12-09",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-12-23",
+    "parent": "2023-Saturday",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-08-29 18:26:45.738904",
+  "name": "2023-Saturday",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 30,
+  "weekly_off": "Saturday"
+ },
+ {
+  "color": null,
+  "country": null,
+  "docstatus": 0,
+  "doctype": "Holiday List",
+  "from_date": "2023-01-01",
+  "holiday_list_name": "2023-Sat-Sun",
+  "holidays": [
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-01",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-08",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-01-14",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-15",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-22",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-01-28",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-01-29",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-05",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-02-11",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-12",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-19",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-02-25",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-02-26",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-05",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-03-11",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-12",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-19",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-03-25",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-03-26",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-02",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-04-08",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-09",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-16",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-04-22",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-23",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-04-30",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "<div class=\"ql-editor read-mode\"><p>Labor Day</p></div>",
+    "holiday_date": "2023-05-01",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-07",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-05-13",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-14",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-21",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-05-27",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-05-28",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-04",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-06-10",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-11",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-18",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-06-24",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-06-25",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-02",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-07-08",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-09",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-16",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-07-22",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-23",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-07-30",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-06",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-08-12",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-13",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "INDEPENDENCE DAY",
+    "holiday_date": "2023-08-15",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-20",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-08-26",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-08-27",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-03",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-09-09",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-10",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-17",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-09-23",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-09-24",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "ANANT CHATURDASHI",
+    "holiday_date": "2023-09-28",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-01",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-08",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-10-14",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-15",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-22",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DUSSHERA",
+    "holiday_date": "2023-10-24",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-10-28",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-10-29",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-05",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-11-11",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-12",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "DIWALI",
+    "holiday_date": "2023-11-13",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "DIWALI (PADVA)",
+    "holiday_date": "2023-11-14",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 0
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-19",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-11-25",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-11-26",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-03",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-12-09",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-10",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-17",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Saturday",
+    "holiday_date": "2023-12-23",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-24",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   },
+   {
+    "description": "Sunday",
+    "holiday_date": "2023-12-31",
+    "parent": "2023-Sat-Sun",
+    "parentfield": "holidays",
+    "parenttype": "Holiday List",
+    "weekly_off": 1
+   }
+  ],
+  "modified": "2023-09-01 11:05:10.504053",
+  "name": "2023-Sat-Sun",
+  "subdivision": null,
+  "to_date": "2023-12-31",
+  "total_holidays": 83,
+  "weekly_off": "Sunday"
+ }
+]

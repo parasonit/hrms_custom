@@ -29,7 +29,9 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+# doctype_js = {
+#     "doctype" : "public/js/doctype.js"
+# }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -110,6 +112,7 @@ from hrms.hr.doctype.shift_type.shift_type import ShiftType
 from hrms_custom.overiders.shift_attendance import process_auto_attendance
 ShiftType.process_auto_attendance = process_auto_attendance
 
+
 #override shift get_attendance
 from hrms_custom.overiders.shift_type import custom_get_attendance
 ShiftType.get_attendance = custom_get_attendance
@@ -123,7 +126,8 @@ ShiftType.get_attendance = custom_get_attendance
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Payroll Entry": "hrms_custom.overiders.payroll_entry.PayrollEntry"
+	"Payroll Entry": "hrms_custom.overiders.payroll_entry.PayrollEntry",
+    "Appraisal": "hrms_custom.overiders.appraisal.CustomAppraisal"
 }
 
 # Document Events
@@ -241,7 +245,8 @@ fixtures = [
             "dt","in",[
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
                 "Income Tax Slab","Appraisal Template","Appraisal",
-                "Shift Type","Holiday List", "Attendance Request-custom_approver", "Attendance Request-custom_approver_name"
+                "Shift Type","Holiday List", "Attendance Request-custom_approver", "Attendance Request-custom_approver_name",
+                "Appraisal-custom_self_appraisal_kra"
             ]
         ]
     ]
@@ -251,7 +256,7 @@ fixtures = [
             "doc_type","in",[
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
                 "Income Tax Slab","Appraisal Template","Appraisal",
-                "Shift Type","Holiday List"
+                "Shift Type", "Holiday List", "Appraisal-self_ratings-hidden", "Appraisal-section_break_23-label"
             ]
         ]
     ]
@@ -280,13 +285,13 @@ fixtures = [
 				]
 			]
     	]},
-        {"dt": "Salary Structure", "filters": [
-			[
-				"name", "in", [
-					"Staff Test 1","Worker Test 3","Contractual Final",
-				]
-			]
-    	]},
+        # {"dt": "Salary Structure", "filters": [
+		# 	[
+		# 		"name", "in", [
+		# 			"Staff Test 1","Worker Test 3","Contractual Final",
+		# 		]
+		# 	]
+    	# ]},
          {"dt": "Income Tax Slab", "filters": [
 			[
 				"name", "in", [
