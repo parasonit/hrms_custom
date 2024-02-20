@@ -23,10 +23,22 @@ class CustomAppraisal(Document):
 		self.validate_duplicate()
 
 		self.set_goal_score()
-		self.calculate_self_appraisal_score()
+		# self.calculate_self_appraisal_score()
 		self.calculate_avg_feedback_score()
 		self.calculate_final_score()
+		self.validate_self_score()
 
+	def validate_self_score(self):
+		total = 0
+		for score in self.goals:
+			if score.custom_self_score > score.per_weightage:
+				frappe.throw(_("Row {0}: Self Score must be less than or equal to weightage").format(score.idx))
+			else:
+				total += score.custom_self_score
+
+		#update total self score
+		self.custom_total_self_score = total
+		
 	def validate_duplicate(self):
 		Appraisal = frappe.qb.DocType("Appraisal")
 		duplicate = (
@@ -98,8 +110,7 @@ class CustomAppraisal(Document):
 		self.set("appraisal_kra", [])
 		self.set("self_ratings", [])
 		self.set("goals", [])
-		self.set("custom_self_appraisal_kra", [])
-
+		
 		template = frappe.get_doc("Appraisal Template", self.appraisal_template)
 
 		for entry in template.goals:
@@ -110,19 +121,13 @@ class CustomAppraisal(Document):
 				{
 					"kra": entry.key_result_area,
 					"per_weightage": entry.per_weightage,
+					"bsc": entry.bsc,
+					"custom_key_activities": entry.custom_key_activities,
+					"metric": entry.metric,
+					"target": entry.target
 				},
 			)
 			
-			#custom 
-			if self.rate_goals_manually:
-				self.append(
-                    "custom_self_appraisal_kra", 
-                    {
-                        "kra": entry.key_result_area,
-                        "per_weightage": entry.per_weightage,
-                    },
-                )
-
 		for entry in template.rating_criteria:
 			self.append(
 				"self_ratings",
@@ -140,11 +145,11 @@ class CustomAppraisal(Document):
 		if self.rate_goals_manually:
 			table = _("Goals")
 			for entry in self.goals:
-				if flt(entry.score) > 5:
-					frappe.throw(_("Row {0}: Goal Score cannot be greater than 5").format(entry.idx))
+				# if flt(entry.score) > 5:
+				# 	frappe.throw(_("Row {0}: Goal Score cannot be greater than 5").format(entry.idx))
 
 				entry.score_earned = flt(entry.score) * flt(entry.per_weightage) / 100
-				total += flt(entry.score_earned)
+				total += flt(entry.score)
 				total_weightage += flt(entry.per_weightage)
 
 		else:
@@ -155,7 +160,7 @@ class CustomAppraisal(Document):
 
 			self.goal_score_percentage = flt(goal_score_percentage, self.precision("goal_score_percentage"))
 			# convert goal score percentage to total score out of 5
-			total = flt(goal_score_percentage) / 20
+			# total = flt(goal_score_percentage) / 20
 
 		if total_weightage and flt(total_weightage, 2) != 100.0:
 			frappe.throw(
@@ -181,11 +186,11 @@ class CustomAppraisal(Document):
 		if self.rate_goals_manually:
 			table = _("Self Appraisal Kra")
 			for entry in self.custom_self_appraisal_kra:
-				if flt(entry.score) > 5:
-					frappe.throw(_("Row {0}: Goal Score cannot be greater than 5").format(entry.idx))
+				# if flt(entry.score) > 5:
+				# 	frappe.throw(_("Row {0}: Goal Score cannot be greater than 5").format(entry.idx))
 
 				entry.score_earned = flt(entry.score) * flt(entry.per_weightage) / 100
-				total += flt(entry.score_earned)
+				total += flt(entry.score)
 				total_weightage += flt(entry.per_weightage)
 		
 		if total_weightage and flt(total_weightage, 2) != 100.0:
@@ -212,10 +217,16 @@ class CustomAppraisal(Document):
 			self.db_update()
 
 	def calculate_final_score(self):
-		final_score = (flt(self.total_score) + flt(self.avg_feedback_score) + flt(self.self_score)) / 3
+		# final_score = (flt(self.total_score) + flt(self.avg_feedback_score) + flt(self.self_score)) / 3
+		# self.final_score = flt(self.total_score, self.precision("final_score"))
+		final_score = flt(self.total_score) + flt(self.custom_score_for_contributions_other_than_kras)
+		if flt(final_score) > 100:
+			frappe.throw(_("The final Score shouldn't exceed limit 100 " +"<br>"+
+				"Final Score = Total goal score + score other than KRA"
+				))
 
 		self.final_score = flt(final_score, self.precision("final_score"))
-
+		
 	@frappe.whitelist()
 	def add_feedback(self, feedback, feedback_ratings):
 		feedback = frappe.get_doc(

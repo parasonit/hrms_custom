@@ -29,9 +29,9 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {
-#     "doctype" : "public/js/doctype.js"
-# }
+doctype_js = {
+    "Appraisal" : "public/js/appraisal.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -140,7 +140,13 @@ doc_events = {
 	},
     "Shift Request": {
         "on_submit": "hrms_custom.doc_events.update_attendance"
-	}
+	},
+    "Employee": {
+        "validate": "hrms_custom.doc_events.update_user_permission"
+	},
+    # "Appraisal": {
+    #     "validate": "hrms_custom.doc_events.update_kra_goal_score"
+	# }
 }
 
 # Scheduled Tasks
@@ -246,8 +252,10 @@ fixtures = [
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
                 "Income Tax Slab","Appraisal Template","Appraisal",
                 "Shift Type","Holiday List", "Attendance Request-custom_approver", "Attendance Request-custom_approver_name",
-                "Appraisal-custom_self_appraisal_kra"
-            ]
+                "Appraisal-custom_self_appraisal_kra", "Appraisal-custom_approver", "Appraisal Goal-custom_key_activities",
+                "Appraisal Template Goal-custom_key_activities", "Appraisal-custom_is_final", 
+                "Appraisal-final_score-description", "Appraisal-custom_approver_name", "Appraisal-custom_total_self_score"
+            ]	
         ]
     ]
 },
@@ -255,8 +263,12 @@ fixtures = [
         [
             "doc_type","in",[
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
-                "Income Tax Slab","Appraisal Template","Appraisal",
-                "Shift Type", "Holiday List", "Appraisal-self_ratings-hidden", "Appraisal-section_break_23-label"
+                "Income Tax Slab","Appraisal Template","Appraisal","Shift Type", "Holiday List", 
+                "Appraisal-self_ratings-hidden", "Appraisal-section_break_23-label", "Appraisal-feedback_tab-hidden",
+                "Appraisal-total_score-description", "Appraisal Goal-score_earned-hidden", "Appraisal Goal-score-label",
+                "Appraisal Goal-kra-reqd", "Appraisal Goal-main-field_order", "Appraisal Goal-kra-columns", "Appraisal-self_appraisal_tab-depends_on",
+                "Appraisal-self_score-hidden", "Appraisal-self_appraisal_tab-label", "Appraisal-feedback_tab-label",
+                "Appraisal-feedback_tab-depends_on", 
             ]
         ]
     ]

@@ -1,0 +1,39 @@
+{%set styles             = "hrms_custom/templates/includes/style.css" %}      
+{%set watermark         = "hrms_custom/templates/includes/watermark.html" %}
+{%set item              = "hrms_custom/templates/includes/goals.html" %}
+
+
+<style> {%- include styles -%} </style>
+
+<div class="col-mg-12" style="border: 1px solid lightgray; text-align: center;">
+    {% set ans = frappe.db.get_value('Letter Head','Parason Logo','image') %}
+    <img style="margin: auto;" class="logo" alt="Sample Latter Head"  src="/files/PARASON-LOGO.jpg">
+</div>
+<table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th scope="row">Name</th>
+        <td>{{ doc.employee_name }}</td>
+
+        <th scope="row">Employee Code</th>
+        <td>{{ doc.employee }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Designation</th>
+        <td>{{ doc.designation }}</td>
+
+        <th scope="row">Date</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Department</th>
+        <td colspan="">{{ doc.department }}</td>
+
+        <th scope="row">Reporting To</th>
+        <td>{{ doc.custom_approver_name }}</td>
+      </tr>
+    </tbody>
+  </table>
+{%- include watermark -%} 
+{%- include item -%} 
+

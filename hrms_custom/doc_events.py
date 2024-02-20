@@ -28,3 +28,40 @@ def update_attendance(doc, method):
                     'out_time': resp[5]
                 })
                 frappe.db.commit()
+
+def update_user_permission(doc, method):
+    if frappe.db.exists("Employee", doc.name):
+        leave_approver = frappe.db.get_value('Employee', doc.name, 'leave_approver')
+        if leave_approver != doc.leave_approver:
+            #remove old permission
+            frappe.db.delete("User Permission", {
+                "user": leave_approver,
+                "allow": "Employee",
+                "for_value": doc.name 
+            })
+
+            #insert User Permission
+            insert_user_permission(doc)
+    else:
+        insert_user_permission(doc)
+
+def insert_user_permission(doc):
+    doc = frappe.get_doc({
+        'doctype': 'User Permission',
+        "user": doc.leave_approver,
+        "allow": "Employee",
+        "for_value": doc.name,
+        "apply_to_all_doctypes": 1
+    })
+    doc.insert()
+    frappe.db.commit() 
+
+# def update_kra_goal_score(doc, method):
+#     if doc.workflow_state == "Saved":
+#         for goal in doc.goals:
+#             for self_kra in doc.custom_self_appraisal_kra:
+#                 if self_kra.kra == goal.kra:
+#                     self_kra.custom_self_score = self_kra.score
+#                     goal.custom_self_score = self_kra.score
+#                     break
+        
