@@ -254,7 +254,8 @@ fixtures = [
                 "Shift Type","Holiday List", "Attendance Request-custom_approver", "Attendance Request-custom_approver_name",
                 "Appraisal-custom_self_appraisal_kra", "Appraisal-custom_approver", "Appraisal Goal-custom_key_activities",
                 "Appraisal Template Goal-custom_key_activities", "Appraisal-custom_is_final", 
-                "Appraisal-final_score-description", "Appraisal-custom_approver_name", "Appraisal-custom_total_self_score"
+                "Appraisal-final_score-description", "Appraisal-custom_approver_name", "Appraisal-custom_total_self_score",
+                "Employee-custom_pms_eligibility"
             ]	
         ]
     ]
