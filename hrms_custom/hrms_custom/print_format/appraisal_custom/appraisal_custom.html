@@ -1,8 +1,8 @@
 {%set styles             = "hrms_custom/templates/includes/style.css" %}      
 {%set watermark         = "hrms_custom/templates/includes/watermark.html" %}
-{%set item              = "hrms_custom/templates/includes/goals.html" %}
+{%set goals              = "hrms_custom/templates/includes/goals.html" %}
 
-
+<meta name="pdfkit-orientation" content="Landscape"/>
 <style> {%- include styles -%} </style>
 
 <div class="col-mg-12" style="border: 1px solid lightgray; text-align: center;">
@@ -34,6 +34,8 @@
       </tr>
     </tbody>
   </table>
-{%- include watermark -%} 
-{%- include item -%} 
+{% if doc.docstatus ==0 %}
+  {%- include watermark -%} 
+{% endif %}
+{%- include goals -%} 
 

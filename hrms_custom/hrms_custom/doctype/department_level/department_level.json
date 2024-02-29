@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-23 12:29:44.546057",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "what_went_right",
+  "what_could_have_been_better"
+ ],
+ "fields": [
+  {
+   "fieldname": "what_went_right",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "What went right"
+  },
+  {
+   "fieldname": "what_could_have_been_better",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "What could have been better"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-29 18:19:48.435410",
+ "modified_by": "Administrator",
+ "module": "Hrms Custom",
+ "name": "Department Level",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

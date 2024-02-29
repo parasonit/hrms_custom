@@ -1,0 +1,33 @@
+<!-- jinja -->
+<div class="row card-container">
+    {% for card in data %}
+    <div class="widget number-widget-box" style="width: 22%; margin: 10px 5px;" data-widget-name="Total Employees">
+        <div class="widget-head">
+                <div class="widget-label">
+                    <div class="widget-title">
+                        <span class="ellipsis" title="Total Employees">
+                            {{card.name}}
+                        </span>
+                    </div>
+                    <div class="widget-subtitle"></div>
+                </div>
+        </div>
+        <a href="{{card.route}}" target="_blank">
+            <div class="widget-body">
+                <div class="widget-content">
+                    <div class="number">
+                        {{card.total}}
+                    </div>
+                    <div class="card-stats grey-stat">
+                        <!-- <span class="percentage-stat-area">
+                            0  % since last month
+                        </span> -->
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div class="widget-footer"></div>
+    </div>
+    {% endfor %}
+</div>
+

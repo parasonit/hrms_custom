@@ -1,3 +1,8 @@
 
 __version__ = '0.0.1'
 
+
+from hrms.hr.doctype.employee_performance_feedback.employee_performance_feedback import EmployeePerformanceFeedback
+from hrms_custom.overiders.employee_performance_feedback import custom_validate_total_weightage
+
+EmployeePerformanceFeedback.validate_total_weightage = custom_validate_total_weightage

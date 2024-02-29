@@ -4,7 +4,7 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2024-02-18 17:18:03.753147",
+ "modified": "2024-02-22 10:33:52.318004",
  "modified_by": "Administrator",
  "module": "Hrms Custom",
  "name": "pms",
@@ -19,6 +19,9 @@
   },
   {
    "role": "Director"
+  },
+  {
+   "role": "System Manager"
   }
  ],
  "script": null,

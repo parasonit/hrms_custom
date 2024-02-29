@@ -30,7 +30,8 @@ app_license = "MIT"
 
 # include js in doctype views
 doctype_js = {
-    "Appraisal" : "public/js/appraisal.js"
+    "Appraisal" : "public/js/appraisal.js",
+    "Appraisal Template": "public/js/appraisal_template.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -255,7 +256,9 @@ fixtures = [
                 "Appraisal-custom_self_appraisal_kra", "Appraisal-custom_approver", "Appraisal Goal-custom_key_activities",
                 "Appraisal Template Goal-custom_key_activities", "Appraisal-custom_is_final", 
                 "Appraisal-final_score-description", "Appraisal-custom_approver_name", "Appraisal-custom_total_self_score",
-                "Employee-custom_pms_eligibility"
+                "Employee-custom_pms_eligibility", "Appraisal-custom_pms_eligibility", "Appraisal-custom_activities", 
+                "Appraisal-custom_total_activity_score", "Appraisal-custom_total_activity_self_score","Appraisal-custom_score_conversion",
+                "Appraisal-workflow_state","Appraisal Goal-custom_kras"
             ]	
         ]
     ]
@@ -269,7 +272,8 @@ fixtures = [
                 "Appraisal-total_score-description", "Appraisal Goal-score_earned-hidden", "Appraisal Goal-score-label",
                 "Appraisal Goal-kra-reqd", "Appraisal Goal-main-field_order", "Appraisal Goal-kra-columns", "Appraisal-self_appraisal_tab-depends_on",
                 "Appraisal-self_score-hidden", "Appraisal-self_appraisal_tab-label", "Appraisal-feedback_tab-label",
-                "Appraisal-feedback_tab-depends_on", 
+                "Appraisal-feedback_tab-depends_on", "KRA-description-label","Appraisal Goal-kra-hidden","Appraisal Goal-kra-fetch_from",
+                "Appraisal Goal-kra-in_list_view","Appraisal Goal-main-field_order"
             ]
         ]
     ]

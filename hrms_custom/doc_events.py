@@ -46,15 +46,19 @@ def update_user_permission(doc, method):
         insert_user_permission(doc)
 
 def insert_user_permission(doc):
-    doc = frappe.get_doc({
-        'doctype': 'User Permission',
-        "user": doc.leave_approver,
-        "allow": "Employee",
-        "for_value": doc.name,
-        "apply_to_all_doctypes": 1
-    })
-    doc.insert()
-    frappe.db.commit() 
+    roles = frappe.get_roles(doc.leave_approver)
+    if "HR Manager" in roles or "HR User" in roles:
+        return
+    else:
+        doc = frappe.get_doc({
+            'doctype': 'User Permission',
+            "user": doc.leave_approver,
+            "allow": "Employee",
+            "for_value": doc.name,
+            "apply_to_all_doctypes": 1
+        })
+        doc.insert()
+        frappe.db.commit() 
 
 # def update_kra_goal_score(doc, method):
 #     if doc.workflow_state == "Saved":

@@ -27,6 +27,26 @@ class CustomAppraisal(Document):
 		self.calculate_avg_feedback_score()
 		self.calculate_final_score()
 		self.validate_self_score()
+		self.validate_activity_score()
+
+	def validate_activity_score(self):
+		total_score = 0
+		total_self_score = 0
+		count = 0
+		for score in self.custom_activities:
+			total_score += float(score.score)
+			total_self_score += float(score.self_score)
+			count += 1
+		
+		#update total self score
+		self.custom_total_activity_score = total_score
+		self.custom_total_activity_self_score = total_self_score
+
+		#calculate Score Conversion
+		if count > 0:
+			weightage = count * 5
+			percentage = (total_score / weightage) * 100
+			self.custom_score_conversion = percentage
 
 	def validate_self_score(self):
 		total = 0
@@ -120,6 +140,7 @@ class CustomAppraisal(Document):
 				table_name, 
 				{
 					"kra": entry.key_result_area,
+					"custom_kras":entry.key_result_area,
 					"per_weightage": entry.per_weightage,
 					"bsc": entry.bsc,
 					"custom_key_activities": entry.custom_key_activities,
@@ -228,7 +249,7 @@ class CustomAppraisal(Document):
 		self.final_score = flt(final_score, self.precision("final_score"))
 		
 	@frappe.whitelist()
-	def add_feedback(self, feedback, feedback_ratings):
+	def add_feedback(self, feedback, feedback_ratings=None):
 		feedback = frappe.get_doc(
 			{
 				"doctype": "Employee Performance Feedback",
@@ -239,16 +260,16 @@ class CustomAppraisal(Document):
 				"reviewer": frappe.db.get_value("Employee", {"user_id": frappe.session.user}),
 			}
 		)
-
-		for entry in feedback_ratings:
-			feedback.append(
-				"feedback_ratings",
-				{
-					"criteria": entry.get("criteria"),
-					"rating": entry.get("rating"),
-					"per_weightage": entry.get("per_weightage"),
-				},
-			)
+		if feedback_ratings:
+			for entry in feedback_ratings:
+				feedback.append(
+					"feedback_ratings",
+					{
+						"criteria": entry.get("criteria"),
+						"rating": entry.get("rating"),
+						"per_weightage": entry.get("per_weightage"),
+					},
+				)
 
 		feedback.submit()
 
