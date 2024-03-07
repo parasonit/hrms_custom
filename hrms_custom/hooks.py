@@ -144,7 +144,11 @@ doc_events = {
         "on_submit": "hrms_custom.doc_events.update_attendance"
 	},
     "Employee": {
-        "validate": "hrms_custom.doc_events.update_user_permission"
+        "validate": [
+            "hrms_custom.doc_events.update_user_permission",
+            "hrms_custom.doc_events.validate_adhaar",
+            "hrms_custom.doc_events.calculate_age"
+        ]
 	},
     "Job Opening": {
         "validate": "hrms_custom.doc_events.update_job_opening_date"
@@ -167,9 +171,9 @@ scheduler_events = {
 	# "all": [
 	# 	"hrms_custom.tasks.all"
 	# ],
-	# "daily": [
-	# 	"hrms_custom.tasks.daily"
-	# ],
+	"daily": [
+		"hrms_custom.doc_events.calculate_age"
+	],
 	"hourly_long": [
 		"hrms_custom.overiders.checkin_sync.record_transactions"
 	],

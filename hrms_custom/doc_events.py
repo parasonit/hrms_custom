@@ -1,5 +1,8 @@
 from hrms_custom.overiders.shift_type import custom_get_attendance
 import frappe
+from frappe import _
+from datetime import datetime
+
 
 def update_attendance(doc, method):
     if doc.docstatus == 1:
@@ -63,6 +66,21 @@ def insert_user_permission(doc):
 def update_job_opening_date(doc, method):
     if doc.workflow_state == "Approved":
         doc.custom_open_on = frappe.utils.nowdate()
+
+def validate_adhaar(doc, method):
+    if not is_integer(doc.aadhar_number):
+        frappe.throw(_("Aadhaar number must be integer."))
+    elif len(doc.aadhar_number) < 12 or len(doc.aadhar_number) > 12:
+        frappe.throw(_("Aadhaar number must be 12 digits long."))
+
+
+def calculate_age(doc, method):
+    today = datetime.today()
+    dob = datetime.strptime(doc.date_of_birth, "%Y-%m-%d")  # Assuming DOB format is YYYY-MM-DD
+    age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+    frappe.log_error("age", age)
+    doc.vay = age
+
 # def update_kra_goal_score(doc, method):
 #     if doc.workflow_state == "Saved":
 #         for goal in doc.goals:
@@ -72,3 +90,10 @@ def update_job_opening_date(doc, method):
 #                     goal.custom_self_score = self_kra.score
 #                     break
         
+
+def is_integer(adhaar):
+    try:
+        int(adhaar)
+        return True
+    except ValueError:
+        return False
