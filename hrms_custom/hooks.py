@@ -285,7 +285,7 @@ fixtures = [
             "Job Opening-closed_on-hidden","Job Opening-route-unique","Job Opening-status-in_standard_filter","Job Opening-job_title-in_list_view",
             "Job Opening-description-in_list_view","Job Opening-designation-in_list_view","Job Opening-custom_open_on-in_list_view",
             "Job Opening-custom_open_on-in_list_view","Job Opening-status-in_list_view","Job Opening-custom_no_of_position-in_list_view",
-            "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order"
+            "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order","Employee-column_break_heye-hidden","Employee-main-field_order"
 		]
 	]
 ]},
