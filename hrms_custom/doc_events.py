@@ -60,6 +60,9 @@ def insert_user_permission(doc):
         doc.insert()
         frappe.db.commit() 
 
+def update_job_opening_date(doc, method):
+    if doc.workflow_state == "Approved":
+        doc.custom_open_on = frappe.utils.nowdate()
 # def update_kra_goal_score(doc, method):
 #     if doc.workflow_state == "Saved":
 #         for goal in doc.goals:

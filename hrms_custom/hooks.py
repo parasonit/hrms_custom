@@ -31,7 +31,8 @@ app_license = "MIT"
 # include js in doctype views
 doctype_js = {
     "Appraisal" : "public/js/appraisal.js",
-    "Appraisal Template": "public/js/appraisal_template.js"
+    "Appraisal Template": "public/js/appraisal_template.js",
+    "Job Opening": "public/js/job_opening.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -145,6 +146,9 @@ doc_events = {
     "Employee": {
         "validate": "hrms_custom.doc_events.update_user_permission"
 	},
+    "Job Opening": {
+        "validate": "hrms_custom.doc_events.update_job_opening_date"
+	}
     # "Appraisal": {
     #     "validate": "hrms_custom.doc_events.update_kra_goal_score"
 	# }
@@ -258,77 +262,69 @@ fixtures = [
                 "Appraisal-final_score-description", "Appraisal-custom_approver_name", "Appraisal-custom_total_self_score",
                 "Employee-custom_pms_eligibility", "Appraisal-custom_pms_eligibility", "Appraisal-custom_activities", 
                 "Appraisal-custom_total_activity_score", "Appraisal-custom_total_activity_self_score","Appraisal-custom_score_conversion",
-                "Appraisal-workflow_state","Appraisal Goal-custom_kras"
+                "Appraisal-workflow_state","Appraisal Goal-custom_kras", "Job Opening-workflow_state","Job Opening-custom_employees_replacement",
+                "Job Opening-custom_no_of_position","Job Opening-custom_required_experience","Job Opening-custom_qualification",
+                "Job Opening-custom_grade","Job Opening-custom_reporting_manager","Job Opening-custom_salary","Job Opening-custom_minimum_salary",
+                "Job Opening-custom_column_break_rguxs","Job Opening-custom_maximum_salary","Job Opening-custom_open_on","Employee-custom_account_details",
+                "Employee-custom_column_break_tmpjf","Employee-custom_column_break_c8pfk"
             ]	
         ]
-    ]
+	]
 },
 {"dt":"Property Setter","filters":[
-        [
-            "doc_type","in",[
-                "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
-                "Income Tax Slab","Appraisal Template","Appraisal","Shift Type", "Holiday List", 
-                "Appraisal-self_ratings-hidden", "Appraisal-section_break_23-label", "Appraisal-feedback_tab-hidden",
-                "Appraisal-total_score-description", "Appraisal Goal-score_earned-hidden", "Appraisal Goal-score-label",
-                "Appraisal Goal-kra-reqd", "Appraisal Goal-main-field_order", "Appraisal Goal-kra-columns", "Appraisal-self_appraisal_tab-depends_on",
-                "Appraisal-self_score-hidden", "Appraisal-self_appraisal_tab-label", "Appraisal-feedback_tab-label",
-                "Appraisal-feedback_tab-depends_on", "KRA-description-label","Appraisal Goal-kra-hidden","Appraisal Goal-kra-fetch_from",
-                "Appraisal Goal-kra-in_list_view","Appraisal Goal-main-field_order"
-            ]
-        ]
-    ]
-},
-{"dt": "Holiday List", "filters": [
-			[
-				"name", "in", [
-					"2023-Sat-Sun","2023-Saturday","2023-Friday","2023-Thursday","2023-Wednesday",
-                    "2023-Tuesday","2023-Monday","2023-Sunday","2023",
-				]
-			]
-    	]},
-        {"dt": "Leave Type", "filters": [
-			[
-				"name", "in", [
-					"Privilege Leave","Corporate Staff - PL","Plant Staff - PL","Compensatory Off",
-                    "Worker - CL","Worker - PL","SL - Apprentice Employee","CL - Apprentice Employee",
-                    "CL - Trainee Employee","ESIC",
-				]
-			]
-    	]},
-        {"dt": "Shift Type", "filters": [
-			[
-				"name", "in", [
-					"CMS","NS","FSS","FFS","TS","SS","FS","CG","FG",
-				]
-			]
-    	]},
-        # {"dt": "Salary Structure", "filters": [
-		# 	[
-		# 		"name", "in", [
-		# 			"Staff Test 1","Worker Test 3","Contractual Final",
-		# 		]
-		# 	]
-    	# ]},
-         {"dt": "Income Tax Slab", "filters": [
-			[
-				"name", "in", [
-					"New Regime Individual","Old Regime Super Senior Citizen","Old Regime Individual","Old Regime Senior Citizen",
-				]
-			]
-    	]},
-        {"dt": "Salary Component", "filters": [
-			[
-				"name", "in", [
-					"Arrear Basic","Arrear PF","Arrear Stipend","Arrear HRA","Arrear Conveyance","Arrear Personal Allowance",
-                    "Arrear 5S Allowance","Arrear Education Allowance","Arrear Washing Allowance","Arrear ESIC","Employer ESIC",
-                    "ESIC","Employer Pension","5S Allowance","Attendance Allowance","LWF","PF Basic","Employer LWF","PF Contribution",
-                    "Professional Tax","Personal Allowance","HRA","Annual Variable Pay","Bonus","Variable Pay","Other Earnings",
-                    "Incentive","Production Allowance","Overtime","HRA Static","Basic Static","Education Allowance Static",
-                    "Washing Allowance Static","Personal Allowance Static","Gate Pass Hrs","Gate Pass","Employer PF","Gross",
-                    "Gratuity","Conveyance Static Value","5S Allowance Static Value","Basic","Head","Leave Encashment","Provident Fund"
-                    ,"Conveyance","Education Allowance","Washing Allowance","Stipend","Deputation Allowance","Notice Pay","Additional Tax",
-                    "Other Deduction","GSLI","LIC","Notice Recovery","Personal Loan","Salary Advance","Other",
-				]
-			]
-    	]},
+	[
+		"doc_type","in",[
+			"Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
+			"Income Tax Slab","Appraisal Template","Appraisal","Shift Type", "Holiday List", 
+			"Appraisal-self_ratings-hidden", "Appraisal-section_break_23-label", "Appraisal-feedback_tab-hidden",
+			"Appraisal-total_score-description", "Appraisal Goal-score_earned-hidden", "Appraisal Goal-score-label",
+			"Appraisal Goal-kra-reqd", "Appraisal Goal-main-field_order", "Appraisal Goal-kra-columns", "Appraisal-self_appraisal_tab-depends_on",
+			"Appraisal-self_score-hidden", "Appraisal-self_appraisal_tab-label", "Appraisal-feedback_tab-label",
+			"Appraisal-feedback_tab-depends_on", "KRA-description-label","Appraisal Goal-kra-hidden","Appraisal Goal-kra-fetch_from",
+			"Appraisal Goal-kra-in_list_view","Appraisal Goal-main-field_order", "Job Opening-closes_on-hidden","Job Opening-status-hidden",
+            "Job Opening-closed_on-hidden","Job Opening-route-unique","Job Opening-status-in_standard_filter","Job Opening-job_title-in_list_view",
+            "Job Opening-description-in_list_view","Job Opening-designation-in_list_view","Job Opening-custom_open_on-in_list_view",
+            "Job Opening-custom_open_on-in_list_view","Job Opening-status-in_list_view","Job Opening-custom_no_of_position-in_list_view",
+            "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order"
+		]
+	]
+]},
+{"dt": "Leave Type", "filters": [
+	[
+		"name", "in", [
+			"Privilege Leave","Corporate Staff - PL","Plant Staff - PL","Compensatory Off",
+			"Worker - CL","Worker - PL","SL - Apprentice Employee","CL - Apprentice Employee",
+			"CL - Trainee Employee","ESIC",
+		]
+	]
+]},
+{"dt": "Shift Type", "filters": [
+	[
+		"name", "in", [
+			"CMS","NS","FSS","FFS","TS","SS","FS","CG","FG",
+		]
+	]
+]},
+{"dt": "Income Tax Slab", "filters": [
+	[
+		"name", "in", [
+			"New Regime Individual","Old Regime Super Senior Citizen","Old Regime Individual","Old Regime Senior Citizen",
+		]
+	]
+]},
+{"dt": "Salary Component", "filters": [
+	[
+		"name", "in", [
+			"Arrear Basic","Arrear PF","Arrear Stipend","Arrear HRA","Arrear Conveyance","Arrear Personal Allowance",
+			"Arrear 5S Allowance","Arrear Education Allowance","Arrear Washing Allowance","Arrear ESIC","Employer ESIC",
+			"ESIC","Employer Pension","5S Allowance","Attendance Allowance","LWF","PF Basic","Employer LWF","PF Contribution",
+			"Professional Tax","Personal Allowance","HRA","Annual Variable Pay","Bonus","Variable Pay","Other Earnings",
+			"Incentive","Production Allowance","Overtime","HRA Static","Basic Static","Education Allowance Static",
+			"Washing Allowance Static","Personal Allowance Static","Gate Pass Hrs","Gate Pass","Employer PF","Gross",
+			"Gratuity","Conveyance Static Value","5S Allowance Static Value","Basic","Head","Leave Encashment","Provident Fund"
+			,"Conveyance","Education Allowance","Washing Allowance","Stipend","Deputation Allowance","Notice Pay","Additional Tax",
+			"Other Deduction","GSLI","LIC","Notice Recovery","Personal Loan","Salary Advance","Other",
+		]
+	]
+]},
 ]
