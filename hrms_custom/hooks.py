@@ -32,7 +32,8 @@ app_license = "MIT"
 doctype_js = {
     "Appraisal" : "public/js/appraisal.js",
     "Appraisal Template": "public/js/appraisal_template.js",
-    "Job Opening": "public/js/job_opening.js"
+    "Job Opening": "public/js/job_opening.js",
+    "Employee": "public/js/employee.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -147,6 +148,9 @@ doc_events = {
         "validate": [
             "hrms_custom.doc_events.update_user_permission",
             "hrms_custom.doc_events.validate_adhaar",
+            "hrms_custom.doc_events.validate_pan",
+            "hrms_custom.doc_events.validate_uan",
+            "hrms_custom.doc_events.validate_pf",
             "hrms_custom.doc_events.calculate_age"
         ]
 	},
@@ -270,7 +274,9 @@ fixtures = [
                 "Job Opening-custom_no_of_position","Job Opening-custom_required_experience","Job Opening-custom_qualification",
                 "Job Opening-custom_grade","Job Opening-custom_reporting_manager","Job Opening-custom_salary","Job Opening-custom_minimum_salary",
                 "Job Opening-custom_column_break_rguxs","Job Opening-custom_maximum_salary","Job Opening-custom_open_on","Employee-custom_account_details",
-                "Employee-custom_column_break_tmpjf","Employee-custom_column_break_c8pfk"
+                "Employee-custom_column_break_tmpjf","Employee-custom_column_break_c8pfk","Employee-custom_sub_department",
+                "Employee-custom_column_break_ydtct","Employee-custom_column_break_q4cfo","Employee-custom_column_break_68t5f",
+                
             ]	
         ]
 	]
@@ -289,7 +295,8 @@ fixtures = [
             "Job Opening-closed_on-hidden","Job Opening-route-unique","Job Opening-status-in_standard_filter","Job Opening-job_title-in_list_view",
             "Job Opening-description-in_list_view","Job Opening-designation-in_list_view","Job Opening-custom_open_on-in_list_view",
             "Job Opening-custom_open_on-in_list_view","Job Opening-status-in_list_view","Job Opening-custom_no_of_position-in_list_view",
-            "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order","Employee-column_break_heye-hidden","Employee-main-field_order"
+            "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order","Employee-column_break_heye-hidden",
+            "Employee-status-options","Employee-provident_fund_account-label"
 		]
 	]
 ]},

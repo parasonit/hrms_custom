@@ -68,11 +68,26 @@ def update_job_opening_date(doc, method):
         doc.custom_open_on = frappe.utils.nowdate()
 
 def validate_adhaar(doc, method):
-    if not is_integer(doc.aadhar_number):
+    if doc.aadhar_number and not is_integer(doc.aadhar_number):
         frappe.throw(_("Aadhaar number must be integer."))
-    elif len(doc.aadhar_number) < 12 or len(doc.aadhar_number) > 12:
+    elif doc.aadhar_number and (len(doc.aadhar_number) < 12 or len(doc.aadhar_number) > 12):
         frappe.throw(_("Aadhaar number must be 12 digits long."))
 
+def validate_pan(doc, method):
+    if doc.pan_number and (len(doc.pan_number) < 10 or len(doc.pan_number) > 10):
+        frappe.throw(_("PAN number must be 10 digits long."))
+
+def validate_uan(doc, method):
+    if doc.pf_contribution != "Yes":
+        return
+    if doc.uan_number and (len(doc.uan_number) < 12 or len(doc.uan_number) > 12):
+        frappe.throw(_("UAN number must be 12 digits long."))
+
+def validate_pf(doc, method):
+    if doc.pf_contribution != "Yes":
+        return
+    if doc.provident_fund_account and (len(doc.provident_fund_account) < 22 or len(doc.provident_fund_account) > 22):
+        frappe.throw(_("PF number must be 22 digits long."))
 
 def calculate_age(doc, method):
     today = datetime.today()
