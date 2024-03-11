@@ -276,7 +276,7 @@ fixtures = [
                 "Job Opening-custom_column_break_rguxs","Job Opening-custom_maximum_salary","Job Opening-custom_open_on","Employee-custom_account_details",
                 "Employee-custom_column_break_tmpjf","Employee-custom_column_break_c8pfk","Employee-custom_sub_department",
                 "Employee-custom_column_break_ydtct","Employee-custom_column_break_q4cfo","Employee-custom_column_break_68t5f",
-                
+                "Employee-custom_aadhaar_name","Employee-employment_type"
             ]	
         ]
 	]
@@ -296,7 +296,7 @@ fixtures = [
             "Job Opening-description-in_list_view","Job Opening-designation-in_list_view","Job Opening-custom_open_on-in_list_view",
             "Job Opening-custom_open_on-in_list_view","Job Opening-status-in_list_view","Job Opening-custom_no_of_position-in_list_view",
             "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order","Employee-column_break_heye-hidden",
-            "Employee-status-options","Employee-provident_fund_account-label"
+            "Employee-provident_fund_account-label"
 		]
 	]
 ]},
