@@ -91,7 +91,7 @@ def validate_pf(doc, method):
 
 def calculate_age(doc, method):
     today = datetime.today()
-    dob = datetime.strptime(doc.date_of_birth, "%Y-%m-%d")  # Assuming DOB format is YYYY-MM-DD
+    dob = datetime.strptime(str(doc.date_of_birth), "%Y-%m-%d")  # Assuming DOB format is YYYY-MM-DD
     age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
     frappe.log_error("age", age)
     doc.vay = age
