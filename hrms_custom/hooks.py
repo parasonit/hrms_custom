@@ -276,7 +276,7 @@ fixtures = [
                 "Job Opening-custom_column_break_rguxs","Job Opening-custom_maximum_salary","Job Opening-custom_open_on","Employee-custom_account_details",
                 "Employee-custom_column_break_tmpjf","Employee-custom_column_break_c8pfk","Employee-custom_sub_department",
                 "Employee-custom_column_break_ydtct","Employee-custom_column_break_q4cfo","Employee-custom_column_break_68t5f",
-                "Employee-custom_aadhaar_name","Employee-employment_type"
+                "Employee-custom_aadhaar_name","Employee-employment_type","Appraisal-custom_branch","Appraisal-main-field_order"
             ]	
         ]
 	]
