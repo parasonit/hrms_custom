@@ -19,6 +19,22 @@ frappe.ui.form.on("Job Opening", {
                 ]
             };
         });
-	}
 
+        //Prevent job Applicant creation when No of position full fill
+        const hide_job_opening_btn = $('button.btn.btn-new.btn-secondary.btn-xs.icon-btn[data-doctype="Job Applicant"]')
+        frappe.db.get_list('Job Applicant', {
+            fields: ['name', 'job_title'],
+            filters: {
+                job_title: frm.doc.name,
+                status: "Accepted"
+            }
+        }).then(records => {
+            if(frm.doc.custom_position_type == "New" && records.length >= frm.doc.custom_no_of_position){
+                hide_job_opening_btn.hide()
+            }
+            else if(frm.doc.custom_position_type == "Replacement" && records.length >= 1){
+                hide_job_opening_btn.hide();
+            }
+        })
+	}
 })

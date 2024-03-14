@@ -679,8 +679,8 @@
   "doctype_or_field": "DocType",
   "field_name": null,
   "is_system_generated": 0,
-  "modified": "2024-03-11 10:30:18.645823",
-  "module": null,
+  "modified": "2024-03-13 09:21:24.777276",
+  "module": "Hrms Custom",
   "name": "Employee-main-field_order",
   "property": "field_order",
   "property_type": "Data",
@@ -702,5 +702,21 @@
   "property_type": "Data",
   "row_name": null,
   "value": "[\"workflow_state\", \"custom_approver\", \"custom_approver_name\", \"employee_details_tab\", \"naming_series\", \"employee\", \"employee_name\", \"custom_branch\", \"custom_pms_eligibility\", \"department\", \"designation\", \"column_break0\", \"company\", \"status\", \"appraisal_cycle\", \"start_date\", \"end_date\", \"employee_image\", \"custom_is_final\", \"section_break_aeb0\", \"final_score\", \"kra_tab\", \"appraisal_template\", \"rate_goals_manually\", \"section_break_kras\", \"appraisal_kra\", \"goal_score_percentage\", \"section_break_goals\", \"goals\", \"remarks\", \"total_section\", \"total_score\", \"custom_total_self_score\", \"feedback_tab\", \"feedback_html\", \"section_break_20\", \"avg_feedback_score\", \"self_appraisal_tab\", \"section_break_23\", \"self_ratings\", \"self_score\", \"reflections_section\", \"reflections\", \"organizational_level\", \"organizational_level_1\", \"section_break_3ouny\", \"department_level\", \"section_break_0wu5v\", \"individual_level\", \"section_break_i13tx\", \"contributions_other_than_kras\", \"custom_score_for_contributions_other_than_kras\", \"section_break_gzorg\", \"strengths_and_areas_of_improvement\", \"section_break_6vojw\", \"learning_needs_to_be_filled_by_the_appraiser\", \"section_break_dlsoa\", \"overall_recommendations_to_be_filled_by_the_appraiser\", \"amended_from\", \"custom_tab_6\", \"custom_activities\", \"custom_section_break_zxev4\", \"custom_total_activity_score\", \"custom_total_activity_self_score\", \"custom_column_break_qylyl\", \"custom_score_conversion\"]"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Appraisal Template",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocType",
+  "field_name": null,
+  "is_system_generated": 0,
+  "modified": "2024-03-13 09:21:34.233060",
+  "module": "Hrms Custom",
+  "name": "Appraisal Template-main-field_order",
+  "property": "field_order",
+  "property_type": "Data",
+  "row_name": null,
+  "value": "[\"workflow_state\", \"template_title\", \"custom_reporting_manager\", \"section_break_5\", \"description\", \"section_break_7\", \"goals\", \"rating_criteria\"]"
  }
 ]

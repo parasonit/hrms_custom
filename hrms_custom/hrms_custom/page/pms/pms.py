@@ -12,7 +12,8 @@ def active_employees(role=None):
     if role in hr_staff:
         total_active_employees = len(frappe.db.get_list('Employee',
             filters={
-                'status': 'Active'
+                'status': 'Active',
+                "custom_pms_eligibility": ("!=", "Not Applicable")
             },
             fields=['name'],
             as_list=True
@@ -21,7 +22,8 @@ def active_employees(role=None):
         total_active_employees = len(frappe.db.get_list('Employee',
             filters={
                 'status': 'Active',
-                'leave_approver': frappe.session.user
+                'leave_approver': frappe.session.user,
+                "custom_pms_eligibility": ("!=", "Not Applicable")
             },
             fields=['name'],
             as_list=True
@@ -32,36 +34,46 @@ def active_employees(role=None):
 def appr_pending_by_employees(role=None, appraisal_cycle=None):
     if role in hr_staff:
         #update filters
-        filters = {
-            'workflow_state': 'Draft'
-        }
-        if appraisal_cycle:
-            filters.update({
-                "appraisal_cycle": appraisal_cycle
-            })
+        # filters = {
+        #     'workflow_state': 'Draft'
+        # }
+        # if appraisal_cycle:
+        #     filters.update({
+        #         "appraisal_cycle": appraisal_cycle
+        #     })
+        #     total_appraisal = len(frappe.db.get_list('Appraisal',
+        #         filters=filters,
+        #         fields=['name'],
+        #         as_list=True
+        #     ))
 
-        total_appraisal = len(frappe.db.get_list('Appraisal',
-            filters=filters,
-            fields=['name'],
-            as_list=True
-        ))
+        # else:
+
+        total_active_employee = active_employees(role="System Manager")
+        appraisal_submited_by_emp = appr_submitted_by_emp(role="System Manager", appraisal_cycle=appraisal_cycle)
+        total_appraisal = int(total_active_employee) - int(appraisal_submited_by_emp)
+
     elif role == "Leave Approver":
         #update filters
-        filters = {
-            'workflow_state': 'Draft',
-            'custom_approver': frappe.session.user
-        }
+        # filters = {
+        #     'workflow_state': 'Draft',
+        #     'custom_approver': frappe.session.user
+        # }
 
-        if appraisal_cycle:
-            filters.update({
-                "appraisal_cycle": appraisal_cycle
-            })
+        # if appraisal_cycle:
+        #     filters.update({
+        #         "appraisal_cycle": appraisal_cycle
+        #     })
 
-        total_appraisal = len(frappe.db.get_list('Appraisal',
-            filters=filters,
-            fields=['name'],
-            as_list=True
-        ))
+        # total_appraisal = len(frappe.db.get_list('Appraisal',
+        #     filters=filters,
+        #     fields=['name'],
+        #     as_list=True
+        # ))
+        
+        total_active_employee = active_employees(role="Leave Approver")
+        appraisal_submited_by_emp = appr_submitted_by_emp(role="Leave Approver", appraisal_cycle=appraisal_cycle)
+        total_appraisal = int(total_active_employee) - int(appraisal_submited_by_emp)
 
     return total_appraisal or 0
 
@@ -242,7 +254,7 @@ def appr_submitted_by_emp(role=None, appraisal_cycle=None):
 def get_cards(appraisal_cycle=None):
     cards = []
     #review submitted by employee
-    base_url = "https://hr.parason.com/app/appraisal"
+    base_url = f"{frappe.utils.get_url()}/app/appraisal"
     workflow_state = '["in",["Approval Pending By Reporting Manager","Approval Pending By HR Manager","Approval Pending By Director","Approved"]]'
     encoded_workflow_state = quote(workflow_state, safe='')
     url = f"{base_url}?workflow_state={encoded_workflow_state}&appraisal_cycle={appraisal_cycle}"

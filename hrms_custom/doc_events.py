@@ -112,3 +112,28 @@ def is_integer(adhaar):
         return True
     except ValueError:
         return False
+    
+def update_reporting_manager(doc, method):
+    report_manager = frappe.db.get_value('Employee', {'user_id': frappe.session.user}, ['leave_approver'])
+    if report_manager and doc.workflow_state == "Draft":
+        doc.custom_reporting_manager = report_manager
+
+def validate_job_no(doc, method):
+    if doc.custom_position_type == "New" and doc.custom_no_of_position < 1:
+        frappe.throw(
+			_("Number of positions cannot be 0. Setting it to at least 1."),
+			title=_("Mandatory Field")
+		)
+
+def update_job_applicant_status(doc, method):
+    job_applicant = None
+    if doc.doctype == "Communication" and doc.reference_doctype == "Job Offer":
+        job_applicant = frappe.db.get_value('Job Offer', doc.reference_name, 'job_applicant')
+        status = "Job Ofer Sent"
+    elif doc.doctype == "Job Offer" and doc.workflow_state == "Approved":
+        job_applicant = doc.job_applicant
+        status = "Job Offer Approved"
+
+    if job_applicant:
+        frappe.db.set_value('Job Applicant', job_applicant, 'status', status)
+        frappe.db.commit()

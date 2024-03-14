@@ -42,7 +42,6 @@ function reset_pms_dashboard(page, appraisal_cycle){
 		},
 		callback: function(r) {
 			if(r.message){
-				console.log("111111111111", r.message)
 				update_cards(page, r.message)
 			}
 		}
