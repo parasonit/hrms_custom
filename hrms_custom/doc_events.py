@@ -132,12 +132,16 @@ def validate_job_no(doc, method):
 
 def update_job_applicant_status(doc, method):
     job_applicant = None
-    if doc.doctype == "Communication" and doc.reference_doctype == "Job Offer":
-        job_applicant = frappe.db.get_value('Job Offer', doc.reference_name, 'job_applicant')
-        status = "Job Ofer Sent"
-    elif doc.doctype == "Job Offer" and doc.workflow_state == "Approved":
+    if method == "on_trash":
         job_applicant = doc.job_applicant
-        status = "Job Offer Approved"
+        status = "Open"
+    elif method == "validate":
+        if doc.doctype == "Communication" and doc.reference_doctype == "Job Offer":
+            job_applicant = frappe.db.get_value('Job Offer', doc.reference_name, 'job_applicant')
+            status = "Job Offer Sent"
+        elif doc.doctype == "Job Offer" and doc.workflow_state == "Approved":
+            job_applicant = doc.job_applicant
+            status = "Job Offer Approved"
 
     if job_applicant:
         frappe.db.set_value('Job Applicant', job_applicant, 'status', status)

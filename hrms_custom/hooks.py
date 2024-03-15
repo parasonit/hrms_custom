@@ -167,7 +167,8 @@ doc_events = {
 		]
 	},
     "Job Offer": {
-        "validate": "hrms_custom.doc_events.update_job_applicant_status"
+        "validate": "hrms_custom.doc_events.update_job_applicant_status",
+        "on_trash": "hrms_custom.doc_events.update_job_applicant_status"
 	},
     "Communication": {
         "validate": "hrms_custom.doc_events.update_job_applicant_status"
