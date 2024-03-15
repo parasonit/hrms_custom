@@ -161,7 +161,10 @@ doc_events = {
 		]
 	},
     "Appraisal Template": {
-        "validate": "hrms_custom.doc_events.update_reporting_manager"
+        "validate": [
+            "hrms_custom.doc_events.update_reporting_manager",
+            "hrms_custom.doc_events.update_employee"
+		]
 	},
     "Job Offer": {
         "validate": "hrms_custom.doc_events.update_job_applicant_status"
@@ -290,7 +293,7 @@ fixtures = [
                 "Employee-custom_column_break_ydtct","Employee-custom_column_break_q4cfo","Employee-custom_column_break_68t5f",
                 "Employee-custom_aadhaar_name","Employee-employment_type","Appraisal-custom_branch","Appraisal-main-field_order",
                 "Appraisal Template-workflow_state","Appraisal Template-custom_reporting_manager","Leave Policy Assignment-custom_leave_type_group",
-                "Job Offer-workflow_state"
+                "Job Offer-workflow_state","Appraisal Template-custom_employee"
             ]	
         ]
 	]

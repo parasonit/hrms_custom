@@ -118,6 +118,11 @@ def update_reporting_manager(doc, method):
     if report_manager and doc.workflow_state == "Draft":
         doc.custom_reporting_manager = report_manager
 
+def update_employee(doc,method):
+    employee = frappe.db.get_value('Employee', {'user_id': frappe.session.user}, ['name'])
+    if employee and doc.workflow_state == "Draft":
+        doc.custom_employee = employee
+
 def validate_job_no(doc, method):
     if doc.custom_position_type == "New" and doc.custom_no_of_position < 1:
         frappe.throw(

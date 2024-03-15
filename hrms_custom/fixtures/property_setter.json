@@ -708,22 +708,6 @@
   "doc_type": "Appraisal Template",
   "docstatus": 0,
   "doctype": "Property Setter",
-  "doctype_or_field": "DocType",
-  "field_name": null,
-  "is_system_generated": 0,
-  "modified": "2024-03-13 09:21:34.233060",
-  "module": "Hrms Custom",
-  "name": "Appraisal Template-main-field_order",
-  "property": "field_order",
-  "property_type": "Data",
-  "row_name": null,
-  "value": "[\"workflow_state\", \"template_title\", \"custom_reporting_manager\", \"section_break_5\", \"description\", \"section_break_7\", \"goals\", \"rating_criteria\"]"
- },
- {
-  "default_value": null,
-  "doc_type": "Appraisal Template",
-  "docstatus": 0,
-  "doctype": "Property Setter",
   "doctype_or_field": "DocField",
   "field_name": "rating_criteria",
   "is_system_generated": 0,
@@ -734,5 +718,21 @@
   "property_type": "Check",
   "row_name": null,
   "value": "1"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Appraisal Template",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocType",
+  "field_name": null,
+  "is_system_generated": 0,
+  "modified": "2024-03-15 11:30:30.452821",
+  "module": null,
+  "name": "Appraisal Template-main-field_order",
+  "property": "field_order",
+  "property_type": "Data",
+  "row_name": null,
+  "value": "[\"workflow_state\", \"template_title\", \"employee\", \"custom_reporting_manager\", \"section_break_5\", \"description\", \"section_break_7\", \"goals\", \"rating_criteria\"]"
  }
 ]
