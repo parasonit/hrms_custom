@@ -718,5 +718,21 @@
   "property_type": "Data",
   "row_name": null,
   "value": "[\"workflow_state\", \"template_title\", \"custom_reporting_manager\", \"section_break_5\", \"description\", \"section_break_7\", \"goals\", \"rating_criteria\"]"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Appraisal Template",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "rating_criteria",
+  "is_system_generated": 0,
+  "modified": "2024-03-15 11:25:37.871955",
+  "module": "Hrms Custom",
+  "name": "Appraisal Template-rating_criteria-hidden",
+  "property": "hidden",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
  }
 ]
