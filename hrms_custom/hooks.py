@@ -310,7 +310,9 @@ fixtures = [
             "Job Opening-description-in_list_view","Job Opening-designation-in_list_view","Job Opening-custom_open_on-in_list_view",
             "Job Opening-custom_open_on-in_list_view","Job Opening-status-in_list_view","Job Opening-custom_no_of_position-in_list_view",
             "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order","Employee-column_break_heye-hidden",
-            "Employee-provident_fund_account-label","Job Applicant-status-options","Job Offer-workflow_state"
+            "Employee-provident_fund_account-label","Job Applicant-status-options","Job Offer-workflow_state","Appraisal Template-rating_criteria-hidden",
+            "Appraisal Template Goal-key_result_area-columns","Appraisal Template Goal-per_weightage-width","Appraisal Template Goal-per_weightage-columns",
+            "Leave Policy Assignment-main-field_order"
 		]
 	]
 ]},

@@ -273,7 +273,7 @@ def get_cards(appraisal_cycle=None):
 
         cards = [
             {
-                "name": "Active Employees",
+                "name": "Eligible Employees",
                 "total": total_active_employee,
                 "route": "employee?status=Active"
             },
@@ -320,7 +320,7 @@ def get_cards(appraisal_cycle=None):
 
         cards = [
             {
-                "name": "Active Employees",
+                "name": "Eligible Employees",
                 "total": total_active_employee,
                 "route": f"employee?status=Active&appraisal_cycle={appraisal_cycle}"
             },
