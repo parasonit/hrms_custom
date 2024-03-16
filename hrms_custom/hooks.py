@@ -294,7 +294,10 @@ fixtures = [
                 "Employee-custom_column_break_ydtct","Employee-custom_column_break_q4cfo","Employee-custom_column_break_68t5f",
                 "Employee-custom_aadhaar_name","Employee-employment_type","Appraisal-custom_branch","Appraisal-main-field_order",
                 "Appraisal Template-workflow_state","Appraisal Template-custom_reporting_manager","Leave Policy Assignment-custom_leave_type_group",
-                "Job Offer-workflow_state","Appraisal Template-custom_employee"
+                "Job Offer-workflow_state","Appraisal Template-custom_employee","Employee-custom_company_mobile","Job Offer-custom_column_break_jk1xm",
+                "Job Offer-custom_reporting_manager","Job Offer-custom_working_location","Job Offer-custom_sim_card","Job Offer-custom_column_break_ntjgz",
+                "Job Offer-custom_mail_id","Job Offer-custom_mobile","Job Offer-custom_laptopdesktop","Job Offer-custom_assets_requirement","Job Offer-custom_interviewed_by",
+                "Job Offer-custom_ctc","Job Offer-custom_ctc","Job Offer-custom_other_details"
             ]	
         ]
 	]
@@ -316,7 +319,7 @@ fixtures = [
             "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order","Employee-column_break_heye-hidden",
             "Employee-provident_fund_account-label","Job Applicant-status-options","Job Offer-workflow_state","Appraisal Template-rating_criteria-hidden",
             "Appraisal Template Goal-key_result_area-columns","Appraisal Template Goal-per_weightage-width","Appraisal Template Goal-per_weightage-columns",
-            "Leave Policy Assignment-main-field_order"
+            "Leave Policy Assignment-main-field_order","Employee-cell_number-label"
 		]
 	]
 ]},
