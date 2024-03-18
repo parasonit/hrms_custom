@@ -114,8 +114,9 @@ def is_integer(adhaar):
         return False
     
 def update_reporting_manager(doc, method):
-    report_manager = frappe.db.get_value('Employee', {'user_id': frappe.session.user}, ['leave_approver'])
-    if report_manager and doc.workflow_state == "Draft":
+    leave_approver = frappe.db.get_value('Employee', {'user_id': frappe.session.user}, ['leave_approver'])
+    if leave_approver and doc.workflow_state == "Draft":
+        report_manager = frappe.db.get_value('Employee', {'user_id': leave_approver}, 'name')
         doc.custom_reporting_manager = report_manager
 
 def update_employee(doc,method):
