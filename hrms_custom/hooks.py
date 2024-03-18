@@ -298,7 +298,8 @@ fixtures = [
                 "Job Offer-custom_reporting_manager","Job Offer-custom_working_location","Job Offer-custom_sim_card","Job Offer-custom_column_break_ntjgz",
                 "Job Offer-custom_mail_id","Job Offer-custom_mobile","Job Offer-custom_laptopdesktop","Job Offer-custom_assets_requirement","Job Offer-custom_interviewed_by",
                 "Job Offer-custom_ctc","Job Offer-custom_ctc","Job Offer-custom_other_details","Appraisal Template-custom_department",
-                "Appraisal Template-custom_column_break_x9jg9","Appraisal Template-custom_employee_name",
+                "Appraisal Template-custom_column_break_x9jg9","Appraisal Template-custom_employee_name","Appraisal Template Goal-achieved",
+                "Appraisal Template Goal-achieved_percentage","Appraisal Template Goal-metric","Appraisal Template Goal-bsc","Appraisal Template Goal-target"
             ]	
         ]
 	]
