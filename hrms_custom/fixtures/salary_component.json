@@ -74,7 +74,7 @@
   "remove_if_zero_valued": 0,
   "round_to_the_nearest_integer": 1,
   "salary_component": "HRA",
-  "salary_component_abbr": "HRA",
+  "salary_component_abbr": "HRA_1",
   "statistical_component": 0,
   "type": "Earning",
   "variable_based_on_taxable_salary": 0
