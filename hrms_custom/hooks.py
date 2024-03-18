@@ -300,7 +300,7 @@ fixtures = [
                 "Job Offer-custom_ctc","Job Offer-custom_ctc","Job Offer-custom_other_details","Appraisal Template-custom_department",
                 "Appraisal Template-custom_column_break_x9jg9","Appraisal Template-custom_employee_name",
                 "Appraisal Template Goal-custom_bsc","Appraisal Template Goal-custom_target","Appraisal Template Goal-custom_achieved_percentage",
-                "Appraisal Template Goal-custom_metric","Appraisal Template Goal-custom_achieved"
+                "Appraisal Template Goal-custom_metric","Appraisal Template Goal-custom_achieved","KRA-custom_metric"
             ]	
         ]
 	]
