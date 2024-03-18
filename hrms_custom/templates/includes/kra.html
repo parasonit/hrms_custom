@@ -1,0 +1,49 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">SR.</th>
+            <th scope="col">BSC</th>
+            <th scope="col">KRA</th>
+            <th scope="col">Key Activities</th>
+            <th scope="col">Metric</th>
+            <th scope="col">Weightage</th>
+            <th scope="col">Target</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- set rowspan_data = {} -%}
+        {%- for row in doc.goals -%}
+            {%- set key = row.bsc ~ '_' ~ row.key_result_area -%}
+            {%- if key not in rowspan_data -%}
+            {%- set _ = rowspan_data.update({key: {'count': 1, 'row': row}}) -%}
+
+            {%- else -%}
+                {%- set _ = rowspan_data[key].update({'count': count}) -%}
+            {%- endif -%}
+        {%- endfor -%}
+        
+
+        {%- for key, data in rowspan_data.items() -%}
+            <tr>
+                <th scope="row" rowspan="{{ data['count'] }}">{{ data['row'].idx }}</th>
+                <td rowspan="{{ data['count'] }}">{{ data['row'].bsc }}</td>
+                <td rowspan="{{ data['count'] }}">{{ data['row'].key_result_area }}</td>
+                <td rowspan="{{ data['count'] }}">{{ data['row'].custom_key_activities }}</td>
+                <td rowspan="{{ data['count'] }}">{{ data['row'].metric }}</td>
+                <td rowspan="{{ data['count'] }}">{{ data['row'].per_weightage }}</td>
+                <td rowspan="{{ data['count'] }}">{{ data['row'].target }}</td>
+            </tr>
+            {%- set data_count = data['count'] -%}
+            {%- for i in range(data_count) -%}
+                <tr>
+                    <td>{{ doc.goals[loop.index + loop.index0 + 1].bsc }}</td>
+                    <!-- <td>{{ doc.goals[loop.index + loop.index0 + 1].key_result_area }}</td>
+                    <td>{{ doc.goals[loop.index + loop.index0 + 1].custom_key_activities }}</td>
+                    <td>{{ doc.goals[loop.index + loop.index0 + 1].metric }}</td>
+                    <td>{{ doc.goals[loop.index + loop.index0 + 1].per_weightage }}</td>
+                    <td>{{ doc.goals[loop.index + loop.index0 + 1].target }}</td> -->
+                </tr>
+            {%- endfor -%}
+        {%- endfor -%}
+    </tbody>
+</table>

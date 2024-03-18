@@ -279,10 +279,10 @@ fixtures = [
         [
             "dt","in",[
                 "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
-                "Income Tax Slab","Appraisal Template","Appraisal",
+                "Income Tax Slab","Appraisal Template","Appraisal","Appraisal Template-custom_department",
                 "Shift Type","Holiday List", "Attendance Request-custom_approver", "Attendance Request-custom_approver_name",
-                "Appraisal-custom_self_appraisal_kra", "Appraisal-custom_approver", "Appraisal Goal-custom_key_activities",
-                "Appraisal Template Goal-custom_key_activities", "Appraisal-custom_is_final", 
+                "Appraisal-custom_self_appraisal_kra", "Appraisal-custom_approver","Appraisal Template Goal-custom_key_activity",
+            	"Appraisal-custom_is_final","Appraisal Goal-custom_key_activity","Appraisal Template-custom_designation",
                 "Appraisal-final_score-description", "Appraisal-custom_approver_name", "Appraisal-custom_total_self_score",
                 "Employee-custom_pms_eligibility", "Appraisal-custom_pms_eligibility", "Appraisal-custom_activities", 
                 "Appraisal-custom_total_activity_score", "Appraisal-custom_total_activity_self_score","Appraisal-custom_score_conversion",
@@ -297,7 +297,8 @@ fixtures = [
                 "Job Offer-workflow_state","Appraisal Template-custom_employee","Employee-custom_company_mobile","Job Offer-custom_column_break_jk1xm",
                 "Job Offer-custom_reporting_manager","Job Offer-custom_working_location","Job Offer-custom_sim_card","Job Offer-custom_column_break_ntjgz",
                 "Job Offer-custom_mail_id","Job Offer-custom_mobile","Job Offer-custom_laptopdesktop","Job Offer-custom_assets_requirement","Job Offer-custom_interviewed_by",
-                "Job Offer-custom_ctc","Job Offer-custom_ctc","Job Offer-custom_other_details"
+                "Job Offer-custom_ctc","Job Offer-custom_ctc","Job Offer-custom_other_details","Appraisal Template-custom_department",
+                "Appraisal Template-custom_column_break_x9jg9","Appraisal Template-custom_employee_name",
             ]	
         ]
 	]
