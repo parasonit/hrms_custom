@@ -50,7 +50,7 @@ def update_user_permission(doc, method):
 
 def insert_user_permission(doc):
     roles = frappe.get_roles(doc.leave_approver)
-    if "HR Manager" in roles or "HR User" in roles:
+    if "HR Manager" in roles or "HR User" in roles or "HR HOD" in roles:
         return
     else:
         doc = frappe.get_doc({
@@ -115,11 +115,21 @@ def is_integer(adhaar):
     
 def update_reporting_manager(doc, method):
     report_manager = frappe.db.get_value('Employee', {'user_id': frappe.session.user}, ['leave_approver'])
+    if not report_manager:
+        frappe.throw(
+			_("Reporting Manager is Missing. Contact to your HR Admin"),
+			title=_("Mandatory Field")
+		)
     if report_manager and doc.workflow_state == "Draft":
         doc.custom_reporting_manager = report_manager
 
 def update_employee(doc,method):
     employee = frappe.db.get_value('Employee', {'user_id': frappe.session.user}, ['name'])
+    if not employee:
+        frappe.throw(
+			_("Logged In Employee is Missing. Contact to your HR Admin"),
+			title=_("Mandatory Field")
+		)
     if employee and not doc.custom_employee and doc.workflow_state == "Draft":
         doc.custom_employee = employee
 

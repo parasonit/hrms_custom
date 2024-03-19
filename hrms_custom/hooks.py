@@ -161,9 +161,9 @@ doc_events = {
 		]
 	},
     "Appraisal Template": {
-        "validate": [
-            "hrms_custom.doc_events.update_reporting_manager",
-            "hrms_custom.doc_events.update_employee"
+        "before_insert": [
+            "hrms_custom.doc_events.update_employee",
+            "hrms_custom.doc_events.update_reporting_manager"
 		]
 	},
     "Job Offer": {
