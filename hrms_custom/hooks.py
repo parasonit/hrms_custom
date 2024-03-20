@@ -146,7 +146,7 @@ doc_events = {
 	},
     "Employee": {
         "validate": [
-            "hrms_custom.doc_events.update_user_permission",
+            # "hrms_custom.doc_events.update_user_permission",
             "hrms_custom.doc_events.validate_adhaar",
             "hrms_custom.doc_events.validate_pan",
             "hrms_custom.doc_events.validate_uan",

@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-19 20:20:18.137002",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "document",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-19 20:21:25.204381",
+ "modified_by": "Administrator",
+ "module": "Hrms Custom",
+ "name": "Link Documents",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
