@@ -116,7 +116,7 @@ def appr_pending_by_hr(role=None, appraisal_cycle=None):
     if role in hr_staff:
         #update filters
         filters = {
-            'workflow_state': 'Approval Pending By HR Manager'
+            'workflow_state': 'Approval Pending By HR Head'
         }
         if appraisal_cycle:
             filters.update({
@@ -131,7 +131,7 @@ def appr_pending_by_hr(role=None, appraisal_cycle=None):
     elif role == "Leave Approver":
         #update filters
         filters = {
-                'workflow_state': 'Approval Pending By HR Manager',
+                'workflow_state': 'Approval Pending By HR Head',
                 'custom_approver': frappe.session.user
             }
         if appraisal_cycle:
@@ -220,7 +220,7 @@ def appr_submitted_by_emp(role=None, appraisal_cycle=None):
     if role in hr_staff:
         #update Filter
         filters = {
-            "workflow_state": ["in", ["Approval Pending By Reporting Manager", "Approval Pending By HR Manager", "Approval Pending By Director", "Approved"]],
+            "workflow_state": ["in", ["Approval Pending By Reporting Manager", "Approval Pending By HR Head", "Approval Pending By Director", "Approved"]],
         }
         if appraisal_cycle:
             filters.update({
@@ -235,7 +235,7 @@ def appr_submitted_by_emp(role=None, appraisal_cycle=None):
     elif role == "Leave Approver":
         #update filters
         filters = {
-            "workflow_state": ["in", ["Approval Pending By Reporting Manager", "Approval Pending By HR Manager", "Approval Pending By Director", "Approved"]],
+            "workflow_state": ["in", ["Approval Pending By Reporting Manager", "Approval Pending By HR Head", "Approval Pending By Director", "Approved"]],
             'custom_approver': frappe.session.user
         }
         if appraisal_cycle:
@@ -255,14 +255,14 @@ def get_cards(appraisal_cycle=None):
     cards = []
     #review submitted by employee
     base_url = f"{frappe.utils.get_url()}/app/appraisal"
-    workflow_state = '["in",["Approval Pending By Reporting Manager","Approval Pending By HR Manager","Approval Pending By Director","Approved"]]'
+    workflow_state = '["in",["Approval Pending By Reporting Manager","Approval Pending By HR Head","Approval Pending By Director","Approved"]]'
     encoded_workflow_state = quote(workflow_state, safe='')
     url = f"{base_url}?workflow_state={encoded_workflow_state}&appraisal_cycle={appraisal_cycle}"
 
     roles = frappe.get_roles(frappe.session.user)
 
 
-    if "System Manager" in roles or "HR Manager" in roles or "HR User" in roles:
+    if "System Manager" in roles or "HR Manager" in roles or "HR User" in roles or "HR HOD" in roles:
         total_active_employee = active_employees(role="System Manager")
         appraisal_submited_by_emp = appr_submitted_by_emp(role="System Manager", appraisal_cycle=appraisal_cycle)
         pending_appraisal_by_employee = appr_pending_by_employees(role="System Manager", appraisal_cycle=appraisal_cycle)
@@ -275,7 +275,7 @@ def get_cards(appraisal_cycle=None):
             {
                 "name": "Eligible Employees",
                 "total": total_active_employee,
-                "route": "employee?status=Active"
+                "route": f"employee?status=Active"
             },
             {
                 "name": "Review Submitted By Employee",
@@ -293,9 +293,9 @@ def get_cards(appraisal_cycle=None):
                 "route": f"appraisal?workflow_state=Approval Pending By Reporting Manager&appraisal_cycle={appraisal_cycle}"
             },
             {
-                "name": "Review Pending By HR Manager",
+                "name": "Review Pending By HR Head",
                 "total": pending_appraisal_by_hr,
-                "route": f"appraisal?workflow_state=Approval Pending By HR Manager&appraisal_cycle={appraisal_cycle}"
+                "route": f"appraisal?workflow_state=Approval Pending By HR Head&appraisal_cycle={appraisal_cycle}"
             },
             {
                 "name": "Review Pending By Director",
@@ -322,7 +322,7 @@ def get_cards(appraisal_cycle=None):
             {
                 "name": "Eligible Employees",
                 "total": total_active_employee,
-                "route": f"employee?status=Active&appraisal_cycle={appraisal_cycle}"
+                "route": f"employee?status=Active&leave_approver={frappe.session.user}"
             },
             {
                 "name": "Review Submitted By Employee",
@@ -340,9 +340,9 @@ def get_cards(appraisal_cycle=None):
                 "route": f"appraisal?workflow_state=Approval Pending By Reporting Manager&appraisal_cycle={appraisal_cycle}"
             },
             {
-                "name": "Review Pending By HR Manager",
+                "name": "Review Pending By HR Head",
                 "total": pending_appraisal_by_hr,
-                "route": f"appraisal?workflow_state=Approval Pending By HR Manager&appraisal_cycle={appraisal_cycle}"
+                "route": f"appraisal?workflow_state=Approval Pending By HR Head&appraisal_cycle={appraisal_cycle}"
             },
             {
                 "name": "Review Pending By Director",

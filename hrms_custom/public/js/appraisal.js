@@ -49,10 +49,10 @@ frappe.ui.form.on("Appraisal", {
 			}
 			else{
 				//goals
-				frm.fields_dict.goals.grid.update_docfield_property("self_score", "read_only", 1);
+				frm.fields_dict.goals.grid.update_docfield_property("custom_self_score", "read_only", 1);
 
 				//activity
-				frm.fields_dict.custom_activities.grid.update_docfield_property("self_score", "read_only", 1);
+				frm.fields_dict.custom_activities.grid.update_docfield_property("custom_self_score", "read_only", 1);
 			}
 		}, 500);
 
