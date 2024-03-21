@@ -2,6 +2,8 @@ import frappe
 from frappe import _
 from urllib.parse import quote
 
+import urllib3
+
 hr_staff = ["System Manager", "HR Manager", "HR User"]
 def get_context(context):
     cards = get_cards()
@@ -258,7 +260,6 @@ def get_cards(appraisal_cycle=None):
     workflow_state = '["in",["Approval Pending By Reporting Manager","Approval Pending By HR Head","Approval Pending By Director","Approved"]]'
     encoded_workflow_state = quote(workflow_state, safe='')
     url = f"{base_url}?workflow_state={encoded_workflow_state}&appraisal_cycle={appraisal_cycle}"
-
     roles = frappe.get_roles(frappe.session.user)
 
 
@@ -271,11 +272,14 @@ def get_cards(appraisal_cycle=None):
         pending_appraisal_by_dir = appr_pending_by_dir(role="System Manager", appraisal_cycle=appraisal_cycle)
         appraisal_completed = appr_completed(role="System Manager", appraisal_cycle=appraisal_cycle)        
 
+        pms_eligibility = '["in",["KRA","Activity"]]'
+        encoded_pms_eligibility = quote(pms_eligibility, safe='')
+
         cards = [
             {
                 "name": "Eligible Employees",
                 "total": total_active_employee,
-                "route": f"employee?status=Active"
+                "route": f"employee?status=Active&custom_pms_eligibility={encoded_pms_eligibility}"
             },
             {
                 "name": "Review Submitted By Employee",
@@ -285,7 +289,8 @@ def get_cards(appraisal_cycle=None):
             {
                 "name": "Review Pending By Employee",
                 "total": pending_appraisal_by_employee,
-                "route": f"appraisal?workflow_state=Draft&appraisal_cycle={appraisal_cycle}"
+                "route": "#"
+                # "route": f"appraisal?workflow_state=Draft&appraisal_cycle={appraisal_cycle}"
             },
             {
                 "name": "Review Pending By Reporting Manager",

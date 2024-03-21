@@ -143,7 +143,7 @@ class CustomAppraisal(Document):
 					"custom_kras":entry.key_result_area,
 					"per_weightage": entry.per_weightage,
 					"bsc": entry.custom_bsc,
-					# "custom_key_activities": entry.custom_key_activities,
+					"custom_key_activities": entry.custom_key_activities,
 					"metric": entry.metric,
 					"target": entry.custom_target
 				},
