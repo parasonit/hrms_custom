@@ -8,6 +8,14 @@ frappe.ui.form.on("Appraisal Template", {
 				]
             }
         })
+		
+		//update employee
+		if(frm.doc.__islocal){
+			frappe.db.get_value('Employee', {user_id: frappe.session.user}, 'name')
+			.then(r => {
+				frm.set_value("custom_employee", r.message.name)
+			})
+		}
 	}
 })
 

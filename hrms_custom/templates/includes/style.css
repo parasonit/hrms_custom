@@ -24,3 +24,7 @@
 .print-format{
     padding: 15px !important;
 }
+
+.table, td, th {
+    border-color: rgb(31, 30, 30) !important;
+}

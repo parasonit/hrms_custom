@@ -151,7 +151,7 @@ doc_events = {
             "hrms_custom.doc_events.validate_pan",
             "hrms_custom.doc_events.validate_uan",
             "hrms_custom.doc_events.validate_pf",
-            "hrms_custom.doc_events.calculate_age"
+            # "hrms_custom.doc_events.calculate_age"
         ]
 	},
     "Job Opening": {
