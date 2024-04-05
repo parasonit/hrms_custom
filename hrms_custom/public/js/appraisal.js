@@ -184,7 +184,7 @@ frappe.ui.form.on("Appraisal", {
 		frm.set_value("total_score", total);
 	},
 	custom_kra_cycle(frm){
-		if (frm.doc.custom_kra_cycle == "Monthy"){
+		if (frm.doc.custom_kra_cycle == "Monthly"){
 			frm.set_value("custom_is_final", 0)
 		}
 		else if(frm.doc.custom_kra_cycle == "Yearly"){
