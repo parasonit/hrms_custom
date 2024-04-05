@@ -1,4 +1,9 @@
 frappe.ui.form.on("Appraisal Template", {
+	custom_fiscal_year(frm, cdt, cdn){
+		//update template Title
+		let temp_title = frm.doc.custom_employee + "-FY-" + frm.doc.custom_fiscal_year
+		frm.set_value("template_title", temp_title)
+	},
 	refresh(frm, cdt, cdn) {
 		frm.set_query("custom_key_activity", "goals", function(doc, cdt, cdn) {
 			let d = locals[cdt][cdn];
@@ -8,12 +13,15 @@ frappe.ui.form.on("Appraisal Template", {
 				]
             }
         })
-		
 		//update employee
 		if(frm.doc.__islocal){
 			frappe.db.get_value('Employee', {user_id: frappe.session.user}, 'name')
 			.then(r => {
 				frm.set_value("custom_employee", r.message.name)
+
+				//update template Title
+				let temp_title = frm.doc.custom_employee + "-FY-" + frm.doc.custom_fiscal_year
+				frm.set_value("template_title", temp_title)
 			})
 		}
 	}

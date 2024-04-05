@@ -161,6 +161,9 @@ doc_events = {
 		]
 	},
     "Appraisal Template": {
+        "validate": {
+            "hrms_custom.doc_events.auto_name_appr_temp"
+		},
         "before_insert": [
             "hrms_custom.doc_events.update_employee",
             "hrms_custom.doc_events.update_reporting_manager"
@@ -172,10 +175,11 @@ doc_events = {
 	},
     "Communication": {
         "validate": "hrms_custom.doc_events.update_job_applicant_status"
+	},
+    "Appraisal": {
+        # "validate": "hrms_custom.doc_events.update_kra_goal_score"
+        "autoname": "hrms_custom.doc_events.update_appraisal_name"
 	}
-    # "Appraisal": {
-    #     "validate": "hrms_custom.doc_events.update_kra_goal_score"
-	# }
 }
 
 # Scheduled Tasks
@@ -192,7 +196,7 @@ scheduler_events = {
 	# 	"hrms_custom.tasks.all"
 	# ],
 	"daily": [
-		"hrms_custom.doc_events.calculate_age"
+		"hrms_custom.doc_events.calculate_age_daily"
 	],
 	"hourly_long": [
 		"hrms_custom.overiders.checkin_sync.record_transactions"

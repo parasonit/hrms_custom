@@ -416,7 +416,7 @@
    "name": "Appraisal Template Goal-custom_metric",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "\n% Completion\nTimelines\nPlan V/s Actual\nNo penalty/actions due to non-compliance\n% of Sales\nINR\nNo. of Hours\nSafety Score %\nFrequency rate\nSeverity rate\nKaizen health score\nSystem V/s actual % match\nNumbers\n% NC's in CTQ\n%\n% Reduction\nOTIFEF\n% Ratio",
+   "options": "\n% Completion\nTimelines\nPlan V/s Actual\nNo penalty/actions due to non-compliance\n% of Sales\nINR\nNo. of Hours\nSafety Score %\nFrequency rate\nSeverity rate\nKaizen health score\nSystem V/s actual % match\nNumbers\n% NC's in CTQ\n%\n% Reduction\nOTIFEF\n% Ratio\nNo Pendency",
    "owner": "Administrator",
    "permlevel": 0,
    "precision": "",

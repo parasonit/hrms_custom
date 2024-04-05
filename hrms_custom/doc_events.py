@@ -2,7 +2,7 @@ from hrms_custom.overiders.shift_type import custom_get_attendance
 import frappe
 from frappe import _
 from datetime import datetime
-
+from frappe.model.naming import make_autoname
 
 def update_attendance(doc, method):
     if doc.docstatus == 1:
@@ -93,8 +93,27 @@ def calculate_age(doc, method):
     today = datetime.today()
     dob = datetime.strptime(str(doc.date_of_birth), "%Y-%m-%d")  # Assuming DOB format is YYYY-MM-DD
     age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-    frappe.log_error("age", age)
     doc.vay = age
+
+
+def calculate_age_daily():
+    frappe.log_error("Age Scheduler Working")
+    employees = frappe.db.get_list('Employee',
+        filters={
+            'status': 'Active'
+        },
+        fields=['name', 'date_of_birth']
+    )
+    if len(employees) > 20:
+        frappe.enqueue(update_age, employees=employees, queue="long")
+    
+def update_age(employees):
+    for emp in employees:
+        today = datetime.today()
+        dob = datetime.strptime(str(emp.get('date_of_birth')), "%Y-%m-%d")  # Assuming DOB format is YYYY-MM-DD
+        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+        frappe.db.set_value('Employee', emp.get('name'), 'vay', age)
+        frappe.db.commit()
 
 # def update_kra_goal_score(doc, method):
 #     if doc.workflow_state == "Saved":
@@ -104,7 +123,6 @@ def calculate_age(doc, method):
 #                     self_kra.custom_self_score = self_kra.score
 #                     goal.custom_self_score = self_kra.score
 #                     break
-        
 
 def is_integer(adhaar):
     try:
@@ -156,3 +174,7 @@ def update_job_applicant_status(doc, method):
     if job_applicant:
         frappe.db.set_value('Job Applicant', job_applicant, 'status', status)
         frappe.db.commit()
+
+def update_appraisal_name(doc, method):
+    name = doc.employee + "-APR-" + doc.appraisal_cycle + "-"
+    doc.name = make_autoname(name + ".####")

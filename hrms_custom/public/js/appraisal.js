@@ -11,8 +11,12 @@ frappe.ui.form.on("Appraisal", {
 			}
 		});
 
+		//update employee
 		if(frm.doc.__islocal){
-			frm.set_value("custom_is_final",1) 
+			frappe.db.get_value('Employee', {user_id: frappe.session.user}, 'name')
+			.then(r => {
+				frm.set_value("employee", r.message.name)
+			})
 		}
 	},
 	refresh(frm) {
@@ -55,13 +59,30 @@ frappe.ui.form.on("Appraisal", {
 				frm.fields_dict.custom_activities.grid.update_docfield_property("custom_self_score", "read_only", 1);
 			}
 		}, 500);
-
+		
+		//filter Appraisal Cycle
+		frm.set_query("appraisal_cycle", function() {
+			return {
+				filters: [
+					["Appraisal Cycle","custom_fiscal_year", "in", [frm.doc.custom_fiscal_year]]
+				]
+			}
+		});
 		//remove self score column
 		// setTimeout(() => {
 		// 	removeColumns(frm, ['custom_self_score'], 'custom_self_appraisal_kra')
 		// }, 500);
 	},
-
+	custom_fiscal_year(frm){
+		//filter Appraisal Cycle
+		frm.set_query("appraisal_cycle", function() {
+			return {
+				filters: [
+					["Appraisal Cycle","custom_fiscal_year", "in", [frm.doc.custom_fiscal_year]]
+				]
+			}
+		});
+	},
 	appraisal_template(frm) {
 		if (frm.doc.appraisal_template) {
 			frm.call("set_kras_and_rating_criteria", () => {
@@ -161,6 +182,14 @@ frappe.ui.form.on("Appraisal", {
 		});
 
 		frm.set_value("total_score", total);
+	},
+	custom_kra_cycle(frm){
+		if (frm.doc.custom_kra_cycle == "Monthy"){
+			frm.set_value("custom_is_final", 0)
+		}
+		else if(frm.doc.custom_kra_cycle == "Yearly"){
+			frm.set_value("custom_is_final", 1)
+		}
 	}
 });
 
