@@ -35,7 +35,10 @@ doctype_js = {
     "Job Opening": "public/js/job_opening.js",
     "Employee": "public/js/employee.js"
 }
-doctype_list_js = {"Job Applicant" : "public/js/job_applicant_list.js"}
+doctype_list_js = {
+    "Job Applicant" : "public/js/job_applicant_list.js",
+    "Appraisal": "public/js/appraisal_list.js"
+}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -104,8 +107,10 @@ doctype_list_js = {"Job Applicant" : "public/js/job_applicant_list.js"}
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# 	"Appraisal Template": "hrms_custom.query_condition.appraisal_template_query_condition",
+#     "Appraisal": "hrms_custom.query_condition.appraisal_query_condition"
 # }
+
 #
 # has_permission = {
 #	"Event": "frappe.desk.doctype.event.event.has_permission",
@@ -161,9 +166,7 @@ doc_events = {
 		]
 	},
     "Appraisal Template": {
-        # "validate": {
-        #     "hrms_custom.doc_events.auto_name_appr_temp"
-		# },
+        "validate": "hrms_custom.doc_events.calculate_weightage",
         "before_insert": [
             "hrms_custom.doc_events.update_employee",
             "hrms_custom.doc_events.update_reporting_manager"
@@ -179,6 +182,9 @@ doc_events = {
     "Appraisal": {
         # "validate": "hrms_custom.doc_events.update_kra_goal_score"
         "autoname": "hrms_custom.doc_events.update_appraisal_name"
+	},
+    "User": {
+        "after_insert": "hrms_custom.doc_events.map_employee"
 	}
 }
 

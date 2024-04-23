@@ -1,50 +1,67 @@
 <table class="table table-bordered">
-    <thead>
-      {% if doc.custom_pms_eligibility == "KRA" %}
+  <thead>
+    {% if doc.custom_pms_eligibility == "KRA" %}
+      <tr>
+        <th scope="col">SR.</th>
+        <th scope="col">BSC</th>
+        <th scope="col">KRA</th>
+        <th scope="col">Key Activities</th>
+        <th scope="col">Metric</th>
+        <th scope="col">Target</th>
+        <th scope="col">Weightage</th>
+        <th scope="col">Self Score</th>
+        <th scope="col">Score</th>
+      </tr>
+    {% elif doc.custom_pms_eligibility == "Activity" %}
+      <tr>
+        <th scope="col">SR.</th>
+        <th scope="col">Key Activities</th>
+        <th scope="col">Self Score</th>
+        <th scope="col">Score</th>
+      </tr>
+    {% endif %}
+  </thead>
+  <tbody>
+    {% if doc.custom_pms_eligibility == "KRA" %}
+      {% set total_weight = namespace(value=0) %}
+      {% set total_self_score = namespace(value=0) %}
+      {% set total_score = namespace(value=0) %}
+
+      {%- for row in doc.goals -%}
+        {% set total_weight.value = total_weight.value + row.per_weightage %}
+        {% set total_self_score.value = total_self_score.value + row.custom_self_score %}
+        {% set total_score.value = total_score.value + row.score %}
         <tr>
-          <th scope="col">SR.</th>
-          <th scope="col">BSC</th>
-          <th scope="col">KRA</th>
-          <th scope="col">Key Activities</th>
-          <th scope="col">Metric</th>
-          <th scope="col">Target</th>
-          <th scope="col">Weightage</th>
-          <th scope="col">Score</th>
-          <th scope="col">Self Score</th>
+          <th scope="row">{{ row.idx }}</th>
+          <td>{{ row.bsc }}</td>
+          <td>{{ row.kra }}</td>
+          <td>{{ row.custom_key_activities }}</td>
+          <td>{{ row.metric }}</td>
+          <td>{{ row.target }}</td>
+          <td>{{ row.per_weightage }}</td>
+          <td>{{ row.custom_self_score }}</td>
+          <td>{{ row.score }}</td>
         </tr>
-      {% elif doc.custom_pms_eligibility == "Activity" %}
-        <tr>
-          <th scope="col">SR.</th>
-          <th scope="col">Key Activities</th>
-          <th scope="col">Score</th>
-          <th scope="col">Self Score</th>
-        </tr>
-      {% endif %}
-    </thead>
-    <tbody>
-      {% if doc.custom_pms_eligibility == "KRA" %}
-        {%- for row in doc.goals -%}
-          <tr>
-            <th scope="row">{{ row.idx }}</th>
-            <td>{{ row.bsc }}</td>
-            <td>{{ row.kra }}</td>
-            <td>{{ row.custom_key_activities }}</td>
-            <td>{{ row.metric }}</td>
-            <td>{{ row.target }}</td>
-            <td>{{ row.per_weightage }}</td>
-            <td>{{ row.score }}</td>
-            <td>{{ row.custom_self_score }}</td>
-          </tr>
-          {%- endfor -%}
-      {% elif doc.custom_pms_eligibility == "Activity" %}
-        {%- for row in doc.custom_activities -%}
-          <tr>
-            <th scope="row">{{ row.idx }}</th>
-            <td>{{ row.key_activities }}</td>
-            <td>{{ row.score }}</td>
-            <td>{{ row.self_score }}</td>
-          </tr>
         {%- endfor -%}
-      {% endif %}
-    </tbody>
-  </table>
+        <tr>
+          <td colspan="6" style="text-align: center;"><b>Total</b></td>
+          <td><b>{{total_weight.value}}</b></td>
+          <td><b>{{total_self_score.value}}</b></td>
+          <td><b>{{total_score.value}}</b></td>
+        </tr>
+        <tr>
+          <td colspan="6" style="text-align: center;"><b>Final Score</b></td>
+          <td colspan="3" style="text-align: center;"><b>{{doc.final_score}}</b></td>
+        </tr>
+    {% elif doc.custom_pms_eligibility == "Activity" %}
+      {%- for row in doc.custom_activities -%}
+        <tr>
+          <th scope="row">{{ row.idx }}</th>
+          <td>{{ row.key_activities }}</td>
+          <td>{{ row.self_score }}</td>
+          <td>{{ row.score }}</td>
+        </tr>
+      {%- endfor -%}
+    {% endif %}
+  </tbody>
+</table>

@@ -178,3 +178,44 @@ def update_job_applicant_status(doc, method):
 def update_appraisal_name(doc, method):
     name = doc.employee + "-APR-" + doc.appraisal_cycle + "-"
     doc.name = make_autoname(name + ".####")
+
+def calculate_weightage(doc, method):
+    total_weightage = 0
+    for kra in doc.goals:
+        total_weightage += kra.per_weightage
+    
+    doc.custom_total_weightage = total_weightage
+
+def map_employee(doc, method):
+    employee = frappe.db.get_value('Employee', {'company_email': doc.email}, ['name'])
+    if employee:
+        frappe.db.set_value('Employee', employee, 'user_id', doc.email)
+        frappe.db.commit()
+
+        #update euser permissions for employee
+        employee_user_permission(doc, employee)
+
+        #update user permissions for company
+        company_user_permission(doc)
+        
+        doc.role_profile_name = "Employee"
+        doc.save()
+
+
+def employee_user_permission(doc, employee):
+    user_perm = frappe.new_doc("User Permission")
+    user_perm.user = doc.email
+    user_perm.allow = "Employee"
+    user_perm.for_value = employee
+    user_perm.apply_to_all_doctypes = 1
+    user_perm.insert(ignore_permissions=True)
+    frappe.db.commit()
+
+def company_user_permission(doc):
+    user_perm = frappe.new_doc("User Permission")
+    user_perm.user = doc.email
+    user_perm.allow = "Company"
+    user_perm.for_value = "Parason Machinery India Pvt Ltd"
+    user_perm.apply_to_all_doctypes = 1
+    user_perm.insert(ignore_permissions=True)
+    frappe.db.commit()

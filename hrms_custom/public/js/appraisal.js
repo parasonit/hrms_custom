@@ -31,12 +31,12 @@ frappe.ui.form.on("Appraisal", {
 
 		// make field editable/readonly
 		setTimeout(() => {
-			if(frm.doc.workflow_state == 'Draft'){
+			if(frm.doc.workflow_state == 'Draft' || frm.doc.__islocal == 1){
 				frappe.db.get_value('Employee', frm.doc.employee, 'user_id').then(r => {
 					if(frappe.session.user == r.message.user_id){
 						//goals
 						frm.fields_dict.goals.grid.update_docfield_property("custom_self_score", "read_only", 0);
-						frm.fields_dict.goals.grid.update_docfield_property("score", "read_only", 1);
+						// frm.fields_dict.goals.grid.update_docfield_property("score", "read_only", 1);
 
 						//activity
 						frm.fields_dict.custom_activities.grid.update_docfield_property("self_score", "read_only", 0);
@@ -45,6 +45,7 @@ frappe.ui.form.on("Appraisal", {
 					else{
 						//goals
 						frm.fields_dict.goals.grid.update_docfield_property("custom_self_score", "read_only", 1);
+						frm.fields_dict.goals.grid.update_docfield_property("score", "read_only", 0);
 
 						//activity
 						frm.fields_dict.custom_activities.grid.update_docfield_property("self_score", "read_only", 1);
@@ -54,6 +55,7 @@ frappe.ui.form.on("Appraisal", {
 			else{
 				//goals
 				frm.fields_dict.goals.grid.update_docfield_property("custom_self_score", "read_only", 1);
+				frm.fields_dict.goals.grid.update_docfield_property("score", "read_only", 0);
 
 				//activity
 				frm.fields_dict.custom_activities.grid.update_docfield_property("custom_self_score", "read_only", 1);
@@ -68,6 +70,30 @@ frappe.ui.form.on("Appraisal", {
 				]
 			}
 		});
+
+		//filter Appraisal Template
+		frm.set_query("appraisal_template", function() {
+			return {
+				filters: [
+					["Appraisal Template","workflow_state", "in", ['Approved']],
+					["Appraisal Template","custom_employee", "in", [frm.doc.employee]]
+				]
+			}
+		});
+
+		//filter Goal's KRAs
+		frm.set_query("custom_kras", "goals", function(doc, cdt, cdn) {
+			let d = locals[cdt][cdn];
+			return {
+				filters: [
+					['name', 'not in', ["Other Working", "Other Activities"]]
+				]
+            }
+        })
+
+		if(!frappe.user.has_role("Leave Approver")){
+			frm.set_df_property("custom_score_for_contributions_other_than_kras", "read_only", 1);
+		}
 		//remove self score column
 		// setTimeout(() => {
 		// 	removeColumns(frm, ['custom_self_score'], 'custom_self_appraisal_kra')

@@ -5,9 +5,11 @@
 <meta name="pdfkit-orientation" content="Landscape"/>
 <style> {%- include styles -%} </style>
 
-<div class="col-mg-12" style="border: 1px solid lightgray; text-align: center;">
-    {% set ans = frappe.db.get_value('Letter Head','Parason Logo','image') %}
-    <img style="margin: auto;" class="logo" alt="Sample Latter Head"  src="/files/Parason-Logo-small-size.png">
+<div class="col-mg-12" style="width: 100%; border: 1px solid rgb(31, 30, 30); display: flex; align-items: center; justify-content: space-between;">
+  <div style="text-align: left; font-size: medium;">
+      <b>KRA: {{doc.name}}</b>
+  </div>
+  <img class="logo" style="height: 45px;" alt="Sample Latter Head" src="/files/Parason-Logo-small-size.png">
 </div>
 
 <table class="table table-bordered">
@@ -36,7 +38,7 @@
     </tbody>
   </table>
 {% if doc.docstatus == 0 %}
-  {% if doc.status != "Approved"%}
+  {% if doc.workflow_state != "Approved"%}
   <div id= "watermark"> 
       <p>Draft Copy</p>
   </div>

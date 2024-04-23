@@ -1,14 +1,20 @@
-{%set styles             = "hrms_custom/templates/includes/style.css" %}      
-{%set watermark         = "hrms_custom/templates/includes/watermark.html" %}
-{%set goals              = "hrms_custom/templates/includes/goals.html" %}
+{%set styles = "hrms_custom/templates/includes/style.css" %}      
+{%set watermark = "hrms_custom/templates/includes/watermark.html" %}
+{%set goals = "hrms_custom/templates/includes/goals.html" %}
+
+{%set feedback = "hrms_custom/templates/includes/feedback.html" %}
 
 <meta name="pdfkit-orientation" content="Landscape"/>
 <style> {%- include styles -%} </style>
 
-<div class="col-mg-12" style="border: 1px solid lightgray; text-align: center;">
-    {% set ans = frappe.db.get_value('Letter Head','Parason Logo','image') %}
-    <img style="margin: auto;" class="logo" alt="Sample Latter Head"  src="/files/Parason-Logo-small-size.png">
+
+<div class="col-mg-12" style="width: 100%; border: 1px solid rgb(31, 30, 30); display: flex; align-items: center; justify-content: space-between;">
+  <div style="text-align: left; font-size: medium;">
+      <b>KRA: {{doc.name}}</b>
+  </div>
+  <img class="logo" style="height: 45px;" alt="Sample Latter Head" src="/files/Parason-Logo-small-size.png">
 </div>
+
 <table class="table table-bordered">
     <tbody>
       <tr>
@@ -37,5 +43,11 @@
 {% if doc.docstatus ==0 %}
   {%- include watermark -%} 
 {% endif %}
+
+{% if doc.goals | length > 0 %}
 {%- include goals -%} 
+{% endif %}
+
+{%- include feedback -%}
+
 

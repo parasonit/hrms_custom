@@ -5,14 +5,15 @@ frappe.ui.form.on("Appraisal Template", {
 		frm.set_value("template_title", temp_title)
 	},
 	refresh(frm, cdt, cdn) {
-		frm.set_query("custom_key_activity", "goals", function(doc, cdt, cdn) {
-			let d = locals[cdt][cdn];
-			return {
-				filters: [
-					['kra', '=', d.key_result_area]
-				]
-            }
-        })
+		// frm.set_query("custom_key_activity", "goals", function(doc, cdt, cdn) {
+		// 	let d = locals[cdt][cdn];
+		// 	return {
+		// 		filters: [
+		// 			['kra', '=', d.key_result_area]
+		// 		]
+        //     }
+        // })
+
 		//update employee
 		if(frm.doc.__islocal){
 			frappe.db.get_value('Employee', {user_id: frappe.session.user}, 'name')
@@ -24,6 +25,17 @@ frappe.ui.form.on("Appraisal Template", {
 				frm.set_value("template_title", temp_title)
 			})
 		}
+
+		//filter Goal's KRAs
+		frm.set_query("key_result_area", "goals", function(doc, cdt, cdn) {
+			let d = locals[cdt][cdn];
+			return {
+				filters: [
+					['name', 'not in', ["Other Working", "Other Activities"]]
+				]
+            }
+        })
+
 	}
 })
 

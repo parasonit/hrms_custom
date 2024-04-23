@@ -1,0 +1,239 @@
+<!-- Feedback Organisational Level -->
+{% if doc.organizational_level_1 | length > 0 %}
+<h4>Feedback - Organizational Level</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sr.</th>
+          <th scope="col">What went right</th>
+          <th scope="col">What could have been better</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in doc.organizational_level_1 -%}
+            <tr>
+                <th scope="row">{{ row.idx }}</th>
+                {% if row.what_went_right %}
+                    <td>{{ row.what_went_right }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if row.what_could_have_been_better %}
+                    <td>{{ row.what_could_have_been_better }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{% endif %}
+
+
+<!-- Feedback Department Level -->
+{% if doc.department_level | length > 0 %}
+<h4>Feedback - Department Level</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sr.</th>
+          <th scope="col">What went right</th>
+          <th scope="col">What could have been better</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in doc.department_level -%}
+            <tr>
+                <th scope="row">{{ row.idx }}</th>
+                {% if row.what_went_right %}
+                    <td>{{ row.what_went_right }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if row.what_could_have_been_better %}
+                    <td>{{ row.what_could_have_been_better }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{% endif %}
+
+<!-- Individual Level -->
+{% if doc.individual_level | length > 0 %}
+<h4>Feedback - Individual Level</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sr.</th>
+          <th scope="col">What went right</th>
+          <th scope="col">What could have been better</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in doc.individual_level -%}
+            <tr>
+                <th scope="row">{{ row.idx }}</th>
+                {% if row.what_went_right %}
+                    <td>{{ row.what_went_right }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if row.what_could_have_been_better %}
+                    <td>{{ row.what_could_have_been_better }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{% endif %}
+
+
+<!-- Contributions other than KRAs -->
+{% if doc.contributions_other_than_kras | length > 0 %}
+<h4>Feedback - Contributions other than KRAs</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sr.</th>
+          <th scope="col">Projects / Initiatives taken other than those Identified as KRA's</th>
+          <th scope="col">Benefits of undertaking these projects / Initiatives</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in doc.contributions_other_than_kras -%}
+            <tr>
+                <th scope="row">{{ row.idx }}</th>
+                {% if row.projects__initiatives_taken_other_than_those_identified_as_kras %}
+                    <td>{{ row.projects__initiatives_taken_other_than_those_identified_as_kras }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if row.benefits_of_undertaking_these_projects__initiatives %}
+                    <td>{{ row.benefits_of_undertaking_these_projects__initiatives }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{% endif %}
+
+<!-- Score for Contributions Other than KRAs -->
+{% if doc.custom_score_for_contributions_other_than_kras %}
+<h4>Feedback - Score for Contributions Other than KRAs</h4>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td colspan="4" style="text-align: center;"><b>Total Score</b></td>
+            <td colspan="3" style="text-align: center;"><b>{{doc.custom_score_for_contributions_other_than_kras}}</b></td></tr>
+    </tbody>
+</table>
+{% endif %}
+
+<!-- Strengths and Areas of Improvement -->
+{% if doc.strengths_and_areas_of_improvement | length > 0 %}
+<h4>Feedback - Strengths and Areas of Improvement</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sr.</th>
+          <th scope="col">Identified By</th>
+          <th scope="col">Strengths</th>
+          <th scope="col">Areas of Improvement</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in doc.strengths_and_areas_of_improvement -%}
+            <tr>
+                <th scope="row">{{ row.idx }}</th>
+                {% if row.identified_by %}
+                    <td>{{ row.identified_by }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if row.strengths %}
+                    <td>{{ row.strengths }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if row.areas_of_improvement %}
+                    <td>{{ row.areas_of_improvement }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{% endif %}
+
+
+<!-- Learning Needs to be filled by the Appraiser -->
+{% if doc.learning_needs_to_be_filled_by_the_appraiser | length > 0 %}
+<h4>Feedback - Learning Needs to be filled by the Appraiser</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sr.</th>
+          <th scope="col">Training Need Identification</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in doc.learning_needs_to_be_filled_by_the_appraiser -%}
+            <tr>
+                <th scope="row">{{ row.idx }}</th>
+                {% if row.training_need_identification %}
+                    <td>{{ row.training_need_identification }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{% endif %}
+
+<!-- Overall Recommendations to be filled by the Appraiser -->
+{% if doc.overall_recommendations_to_be_filled_by_the_appraiser | length > 0 %}
+<h4>Feedback - Overall Recommendations to be filled by the Appraiser</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sr.</th>
+            <th scope="col">Recommendation</th>
+            <th scope="col">Suggest Designation or Responsibilities</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in doc.overall_recommendations_to_be_filled_by_the_appraiser -%}
+            <tr>
+                <th scope="row">{{ row.idx }}</th>
+                {% if row.recommendation %}
+                    <td>{{ row.recommendation }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if row.suggest_designation_or_responsibilities %}
+                    <td>{{ row.suggest_designation_or_responsibilities }}</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{% endif %}
