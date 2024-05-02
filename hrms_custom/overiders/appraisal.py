@@ -51,13 +51,13 @@ class CustomAppraisal(Document):
 	def validate_self_score(self):
 		total = 0
 		for score in self.goals:
-			if score.custom_self_score > score.per_weightage:
+			if flt(score.custom_self_score) > flt(score.per_weightage):
 				frappe.throw(_("Row {0}: Self Score must be less than or equal to weightage").format(score.idx))
 			else:
-				total += score.custom_self_score
+				total += flt(score.custom_self_score)
 
 		#update total self score
-		self.custom_total_self_score = total
+		self.custom_total_self_score = round(total)
 		
 	def validate_duplicate(self):
 		Appraisal = frappe.qb.DocType("Appraisal")

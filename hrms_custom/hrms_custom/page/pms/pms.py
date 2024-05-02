@@ -231,7 +231,8 @@ def appr_submitted_by_emp(role=None, appraisal_cycle=None):
 
         total_appraisal = len(frappe.db.get_list('Appraisal',
             filters=filters,
-            fields=['name'],
+            fields=['employee'],
+            group_by='employee',
             as_list=True
         ))
     elif role == "Leave Approver":
@@ -247,7 +248,8 @@ def appr_submitted_by_emp(role=None, appraisal_cycle=None):
 
         total_appraisal = len(frappe.db.get_list('Appraisal',
             filters=filters,
-            fields=['name'],
+            fields=['employee'],
+            group_by='employee',
             as_list=True
         ))
     return total_appraisal or 0
@@ -287,9 +289,9 @@ def get_cards(appraisal_cycle=None):
                 "route": url
             },
             {
-                "name": "Review Pending By Employee",
+                "name": "Appraisal Pending By Employee",
                 "total": pending_appraisal_by_employee,
-                "route": "#"
+                "route": "/app/query-report/Appraisal Pending By Employee"
                 # "route": f"appraisal?workflow_state=Draft&appraisal_cycle={appraisal_cycle}"
             },
             {
@@ -335,9 +337,9 @@ def get_cards(appraisal_cycle=None):
                 "route": url
             },
             {
-                "name": "Review Pending By Employee",
+                "name": "Appraisal Pending By Employee",
                 "total": pending_appraisal_by_employee,
-                "route": f"appraisal?workflow_state=Draft&appraisal_cycle={appraisal_cycle}"
+                "route": "/app/query-report/Appraisal Pending By Employee"
             },
             {
                 "name": "Review Pending By Reporting Manager",

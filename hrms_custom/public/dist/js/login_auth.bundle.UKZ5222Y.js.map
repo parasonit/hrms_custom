@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../apps/hrms_custom/hrms_custom/public/js/login_auth.bundle.js"],
+  "sourcesContent": ["console.log(\"Working....\")\nif(frappe.session.user == 'Guest' || frappe.session.user === undefined){\n    setTimeout(() => {\n        $('.sign-up-message').css('display', 'none');\n    }, 100);\n    frappe.call(\"parason.utils.auth_url\")\n    .then(r => {\n        if(r.message){\n            window.location.replace(r.message);\n        }\n    })\n}"],
+  "mappings": ";;AAAA,UAAQ,IAAI,aAAa;AACzB,MAAG,OAAO,QAAQ,QAAQ,WAAW,OAAO,QAAQ,SAAS,QAAU;AACnE,eAAW,MAAM;AACb,QAAE,kBAAkB,EAAE,IAAI,WAAW,MAAM;AAAA,IAC/C,GAAG,GAAG;AACN,WAAO,KAAK,wBAAwB,EACnC,KAAK,OAAK;AACP,UAAG,EAAE,SAAQ;AACT,eAAO,SAAS,QAAQ,EAAE,OAAO;AAAA,MACrC;AAAA,IACJ,CAAC;AAAA,EACL;",
+  "names": []
+}

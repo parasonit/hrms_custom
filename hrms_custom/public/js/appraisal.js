@@ -94,6 +94,11 @@ frappe.ui.form.on("Appraisal", {
 		if(!frappe.user.has_role("Leave Approver")){
 			frm.set_df_property("custom_score_for_contributions_other_than_kras", "read_only", 1);
 		}
+
+		//make Learning Needs to be filled by the Appraiser read only for employee 
+		if(frm.doc.workflow_state == "Draft" || frm.doc.__islocal){
+			frm.set_df_property("learning_needs_to_be_filled_by_the_appraiser", "read_only", 1);
+		}
 		//remove self score column
 		// setTimeout(() => {
 		// 	removeColumns(frm, ['custom_self_score'], 'custom_self_appraisal_kra')

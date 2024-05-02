@@ -28,3 +28,13 @@
 .table, td, th {
     border-color: rgb(31, 30, 30) !important;
 }
+
+@media print {
+    .pagebreak { page-break-before: always; break-inside: avoid;} /* page-break-after works, as well */
+}
+
+/* @media print {
+    div, table{
+      break-inside: avoid;
+    }
+} */

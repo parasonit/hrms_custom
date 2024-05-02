@@ -45,9 +45,9 @@
         {%- endfor -%}
         <tr>
           <td colspan="6" style="text-align: center;"><b>Total</b></td>
-          <td><b>{{total_weight.value}}</b></td>
-          <td><b>{{total_self_score.value}}</b></td>
-          <td><b>{{total_score.value}}</b></td>
+          <td><b>{{ '%0.2f' % total_weight.value|float }}</b></td>
+          <td><b>{{ '%0.2f' % total_self_score.value|float }}</b></td>
+          <td><b>{{ '%0.2f' % total_score.value|float }}</b></td>
         </tr>
         <tr>
           <td colspan="6" style="text-align: center;"><b>Final Score</b></td>

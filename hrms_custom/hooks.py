@@ -16,7 +16,7 @@ app_license = "MIT"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/hrms_custom/css/hrms_custom.css"
-# web_include_js = "/assets/hrms_custom/js/hrms_custom.js"
+web_include_js = "/assets/hrms_custom/js/login_auth.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "hrms_custom/public/scss/website"
