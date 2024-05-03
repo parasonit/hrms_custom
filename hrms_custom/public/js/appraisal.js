@@ -66,7 +66,8 @@ frappe.ui.form.on("Appraisal", {
 		frm.set_query("appraisal_cycle", function() {
 			return {
 				filters: [
-					["Appraisal Cycle","custom_fiscal_year", "in", [frm.doc.custom_fiscal_year]]
+					["Appraisal Cycle","custom_fiscal_year", "in", [frm.doc.custom_fiscal_year]],
+					['Appraisal Cycle', 'status', '=', "In Progress"],
 				]
 			}
 		});
@@ -99,6 +100,9 @@ frappe.ui.form.on("Appraisal", {
 		if(frm.doc.workflow_state == "Draft" || frm.doc.__islocal){
 			frm.set_df_property("learning_needs_to_be_filled_by_the_appraiser", "read_only", 1);
 		}
+
+		//hide create option from link field
+		frm.set_df_property('appraisal_template', 'only_select', true);
 		//remove self score column
 		// setTimeout(() => {
 		// 	removeColumns(frm, ['custom_self_score'], 'custom_self_appraisal_kra')
