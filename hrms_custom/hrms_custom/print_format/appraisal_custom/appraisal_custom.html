@@ -48,14 +48,16 @@
 {%- include goals -%} 
 {% endif %}
 
-<div class="pagebreak"> </div>
-<br>
-<div class="col-mg-12" style="width: 100%; border: 1px solid rgb(31, 30, 30); display: flex; align-items: center; justify-content: space-between;">
-  <div style="text-align: left; font-size: small;">
-      <b>KRA: {{doc.name}}</b>
+{% if doc.custom_is_final %}
+  <div class="pagebreak"> </div>
+  <br>
+  <div class="col-mg-12" style="width: 100%; border: 1px solid rgb(31, 30, 30); display: flex; align-items: center; justify-content: space-between;">
+    <div style="text-align: left; font-size: small;">
+        <b>KRA: {{doc.name}}</b>
+    </div>
+    <span style="padding: 2px;"><b>{{ doc.employee_name }}</b></span>
   </div>
-  <span style="padding: 2px;"><b>{{ doc.employee_name }}</b></span>
-</div>
-{%- include feedback -%}
+  {%- include feedback -%}
+{% endif %}
 
 

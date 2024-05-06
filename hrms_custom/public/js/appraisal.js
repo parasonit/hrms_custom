@@ -77,7 +77,8 @@ frappe.ui.form.on("Appraisal", {
 			return {
 				filters: [
 					["Appraisal Template","workflow_state", "in", ['Approved']],
-					["Appraisal Template","custom_employee", "in", [frm.doc.employee]]
+					["Appraisal Template","custom_employee", "in", [frm.doc.employee]],
+					["Appraisal Template","custom_fiscal_year", "in", [frm.doc.custom_fiscal_year]],
 				]
 			}
 		});
