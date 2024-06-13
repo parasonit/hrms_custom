@@ -1,0 +1,26 @@
+[
+ {
+  "disable_auto_refresh": 0,
+  "disable_comment_count": 0,
+  "disable_count": 0,
+  "disable_sidebar_stats": 0,
+  "docstatus": 0,
+  "doctype": "List View Settings",
+  "fields": "[{\"fieldname\":\"designation\",\"label\":\"Designation\"},{\"fieldname\":\"department\",\"label\":\"Department\"},{\"fieldname\":\"no_of_positions\",\"label\":\"No of. Positions\"},{\"fieldname\":\"status_field\",\"label\":\"Status\"},{\"fieldname\":\"requested_by_name\",\"label\":\"Requested By (Name)\"},{\"fieldname\":\"custom_recruiter\",\"label\":\"Recruiter\"}]",
+  "modified": "2024-06-12 10:22:43.546879",
+  "name": "Job Requisition",
+  "total_fields": "7"
+ },
+ {
+  "disable_auto_refresh": 0,
+  "disable_comment_count": 0,
+  "disable_count": 0,
+  "disable_sidebar_stats": 0,
+  "docstatus": 0,
+  "doctype": "List View Settings",
+  "fields": "[{\"fieldname\":\"full_name\",\"label\":\"Full Name\"},{\"fieldname\":\"for_designation\",\"label\":\"For Designation \"},{\"fieldname\":\"custom_referral_for_department\",\"label\":\"For Department\"},{\"fieldname\":\"status_field\",\"label\":\"Status\"},{\"fieldname\":\"referrer_name\",\"label\":\"Referrer Name\"}]",
+  "modified": "2024-06-12 13:14:32.497414",
+  "name": "Employee Referral",
+  "total_fields": "7"
+ }
+]

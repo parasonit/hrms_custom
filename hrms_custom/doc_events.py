@@ -3,6 +3,8 @@ import frappe
 from frappe import _
 from datetime import datetime
 from frappe.model.naming import make_autoname
+from frappe.model.mapper import get_mapped_doc
+from frappe.utils import get_url_to_form
 
 def update_attendance(doc, method):
     if doc.docstatus == 1:
@@ -219,3 +221,48 @@ def company_user_permission(doc):
     user_perm.apply_to_all_doctypes = 1
     user_perm.insert(ignore_permissions=True)
     frappe.db.commit()
+
+
+@frappe.whitelist()
+def make_job_opening(source_name, designation, target_doc=None):
+    # Check if job opening already exists
+    job_opening_exists = frappe.db.exists('Job Opening', {'job_title': designation})
+
+    if job_opening_exists:
+        return {'message': f'Job opening already exists: <a href="{get_url_to_form("Job Opening", job_opening_exists)}">{job_opening_exists}</a>'}
+    else:
+        # Set missing values for job opening document
+        def set_missing_values(source, target):
+            target.job_title = source.designation
+            target.status = "Open"
+            target.currency = frappe.db.get_value("Company", source.company, "default_currency")
+            target.lower_range = source.expected_compensation
+            target.description = source.description
+        
+        # Create job opening document
+        doc = get_mapped_doc(
+            "Job Requisition",
+            source_name,
+            {
+                "Job Requisition": {
+                    "doctype": "Job Opening",
+                },
+                "field_map": {
+                    "designation": "designation",
+                    "name": "job_requisition",
+                    "department": "department",
+                    "no_of_positions": "vacancies",
+                },
+            },
+            target_doc,
+            set_missing_values,
+        )
+        try:
+            # Save and commit the document
+            doc.insert()
+            doc.save()
+            frappe.db.commit()
+            return {'message': f'Job opening created: <a href="{get_url_to_form("Job Opening", doc.name)}">{doc.name}</a>'}
+        except Exception as e:
+            return {'message': f'Error creating job opening: {str(e)}'}
+

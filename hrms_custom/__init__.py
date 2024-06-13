@@ -6,3 +6,10 @@ from hrms.hr.doctype.employee_performance_feedback.employee_performance_feedback
 from hrms_custom.overiders.employee_performance_feedback import custom_validate_total_weightage
 
 EmployeePerformanceFeedback.validate_total_weightage = custom_validate_total_weightage
+
+
+from hrms.hr.doctype.job_requisition.job_requisition import JobRequisition 
+from hrms_custom.overrides import validate_duplicates
+
+JobRequisition.validate_duplicates = validate_duplicates
+

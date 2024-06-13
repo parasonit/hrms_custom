@@ -32,12 +32,18 @@ web_include_js = "/assets/hrms_custom/js/login_auth.js"
 doctype_js = {
     "Appraisal" : "public/js/appraisal.js",
     "Appraisal Template": "public/js/appraisal_template.js",
-    "Job Opening": "public/js/job_opening.js",
-    "Employee": "public/js/employee.js"
+    # "Job Opening": "public/js/job_opening.js",
+    "Employee": "public/js/employee.js",
+    "Staffing Plan": "public/js/staffing_plan.js",
+    "Job Requisition":"public/js/job_requisition.js",
+    "Employee Referral": "public/js/employee_referral.js"
 }
 doctype_list_js = {
     "Job Applicant" : "public/js/job_applicant_list.js",
-    "Appraisal": "public/js/appraisal_list.js"
+    "Appraisal": "public/js/appraisal_list.js",
+    "Job Requisition":"public/js/list_view/job_requisition_list.js",
+    "Employee Referral": "public/js/list_view/employee_referral_list.js"
+
 }
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -159,12 +165,12 @@ doc_events = {
             # "hrms_custom.doc_events.calculate_age"
         ]
 	},
-    "Job Opening": {
-        "validate": [
-            "hrms_custom.doc_events.update_job_opening_date",
-            "hrms_custom.doc_events.validate_job_no"
-		]
-	},
+    # "Job Opening": {
+    #     "validate": [
+    #         "hrms_custom.doc_events.update_job_opening_date",
+    #         "hrms_custom.doc_events.validate_job_no"
+	# 	]
+	# },
     "Appraisal Template": {
         "validate": "hrms_custom.doc_events.calculate_weightage",
         "before_insert": [
@@ -172,10 +178,10 @@ doc_events = {
             "hrms_custom.doc_events.update_reporting_manager"
 		]
 	},
-    "Job Offer": {
-        "validate": "hrms_custom.doc_events.update_job_applicant_status",
-        "on_trash": "hrms_custom.doc_events.update_job_applicant_status"
-	},
+    # "Job Offer": {
+    #     "validate": "hrms_custom.doc_events.update_job_applicant_status",
+    #     "on_trash": "hrms_custom.doc_events.update_job_applicant_status"
+	# },
     "Communication": {
         "validate": "hrms_custom.doc_events.update_job_applicant_status"
 	},
@@ -223,9 +229,9 @@ scheduler_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "hrms_custom.event.get_events"
-# }
+override_whitelisted_methods = {
+	"hrms.hr.doctype.staffing_plan.staffing_plan.get_designation_counts": "hrms_custom.overrides.custom_get_designation_counts"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
@@ -374,4 +380,13 @@ fixtures = [
 		]
 	]
 ]},
+{"dt": "List View Settings", "filters": [
+    [
+        "name", "in", [
+            "Job Requisition",
+            'Employee Referral'
+        ]
+    ]
+]}
+
 ]

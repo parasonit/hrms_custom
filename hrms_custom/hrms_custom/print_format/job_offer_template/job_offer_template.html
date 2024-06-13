@@ -1,0 +1,32 @@
+{% set styles_path = "hrms_custom/templates/includes/style.css" %}
+{% set watermark_path = "hrms_custom/templates/includes/watermark.html" %}
+
+<meta name="pdfkit-orientation" content="Landscape" />
+<style>
+  {
+    %- include styles_path -%
+  }
+</style>
+<div class="col-mg-12 container" style="width: 100%; ">
+
+  <div class="row">
+    <div class="col text-right mr-5">
+  <b>Date: {{ frappe.format(frappe.utils.nowdate(), {'fieldtype': 'Date'}) }}</b>
+    </div>
+
+  </div>
+  <b>Mr. {{ doc.applicant_name }} </b>
+  <p>Vill- </p>
+  <p>Distt- </p>
+
+  <div class="row">
+    <div class="col text-center">
+  <h3>SUB: <U>OFFER LETTER</U></h3>
+</div>
+
+</div>
+  {% set job_offer_doc = frappe.get_doc("Job Offer", doc.name ) %}
+  {% set context = {"doc": job_offer_doc, "nowdate": nowdate} %}
+  {% set rendered_terms = frappe.render_template(job_offer_doc.terms, context) %}
+  {{ rendered_terms }}
+</div>
