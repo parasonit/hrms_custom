@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-21 10:49:59.431541",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "zip_file",
+  "column_break_pqvh",
+  "year"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nFORM-16/PARTB\nIncrement Letter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Year",
+   "options": "\n2020\n2021\n2022\n2023\n2024\n2025",
+   "reqd": 1
+  },
+  {
+   "fieldname": "zip_file",
+   "fieldtype": "Attach",
+   "label": "Zip File"
+  },
+  {
+   "fieldname": "column_break_pqvh",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-06-21 11:38:11.426834",
+ "modified_by": "Administrator",
+ "module": "Hrms Custom",
+ "name": "Update Employee Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

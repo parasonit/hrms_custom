@@ -39,7 +39,11 @@ frappe.ui.form.on('Job Requisition', {
 
 
     refresh(frm) {
-             
+
+        customizeFileUploaderDialog(frm); // Customize file uploader dialog
+        customizeDialogUploadOptions();
+
+
         if (frm.is_new()) {
             frappe.db.get_value('Employee', { user_id: frappe.session.user }, 'name', ({ name }) => {
                 frm.set_value('requested_by', name);
@@ -74,7 +78,75 @@ frappe.ui.form.on('Job Requisition', {
                 }
             });
         }
-        
-        
     }
 });
+
+
+
+
+// Function to customize file uploader dialog options
+function customizeFileUploaderDialog(frm) {
+    if (frm.doctype === 'Job Requisition') {
+        frappe.ui.FileUploader.prototype.make_dialog = function (title) {
+            this.dialog = new frappe.ui.Dialog({
+                title: title || __("Upload"),
+                primary_action_label: __("Upload"),
+
+                // core code commented
+                // primary_action: () => this.upload_files(),
+
+                // custom code
+                primary_action: validateAndUpload.bind(this),
+                // custom code end
+
+                secondary_action_label: __("Set all private"),
+                secondary_action: () => {
+                    this.uploader.toggle_all_private();
+                },
+                on_page_show: () => {
+                    this.uploader.wrapper_ready = true;
+                },
+            });
+
+            this.wrapper = this.dialog.body;
+            this.dialog.show();
+            this.dialog.$wrapper.on("hidden.bs.modal", function () {
+                $(this).data("bs.modal", null);
+                $(this).remove();
+            });
+        };
+    }
+}
+
+// Function to validate file extension and handle upload
+function validateAndUpload() {
+    let fileExtension = this.dialog.body.innerText.split('\n')[0].trim().split('.').pop().toLowerCase();
+
+    if (!['pdf', 'doc', 'docx'].includes(fileExtension)) {
+        this.dialog.$wrapper.find('.file-action-buttons button:eq(1)').click();
+        frappe.msgprint(__("Please attach a PDF, DOC, or DOCX file only."), __("Invalid File Type"), 'red');
+    } else {
+        this.upload_files();
+    }
+}
+
+
+// Function to customize document upload options (removes Library and Link buttons)
+function customizeDialogUploadOptions() {
+    $('[data-fieldname="custom_document_upload"]').on('click', () => {
+        const observer = new MutationObserver(mutations => {
+            mutations.forEach(function (mutation) {
+                mutation.addedNodes.forEach(node => {
+                    if ($(node).hasClass('modal')) {
+                        $(node).find('button:contains("Library"), button:contains("Link")').remove();
+                        $(node).find('input[type="file"]').attr('accept', '.pdf, .docx, .doc');
+                    }
+                });
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        setTimeout(() => observer.disconnect(), 500);
+    });
+}

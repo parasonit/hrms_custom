@@ -32,7 +32,8 @@ web_include_js = "/assets/hrms_custom/js/login_auth.js"
 doctype_js = {
     "Appraisal" : "public/js/appraisal.js",
     "Appraisal Template": "public/js/appraisal_template.js",
-    # "Job Opening": "public/js/job_opening.js",
+    "Job Opening": "public/js/job_opening.js",
+    "Job Offer": "public/js/job_offer.js",
     "Employee": "public/js/employee.js",
     "Staffing Plan": "public/js/staffing_plan.js",
     "Job Requisition":"public/js/job_requisition.js",
@@ -209,6 +210,7 @@ scheduler_events = {
 	# ],
 	"daily": [
 		"hrms_custom.doc_events.calculate_age_daily"
+        "hrms_custom.utils.update_employee_documents"
 	],
 	"hourly_long": [
 		"hrms_custom.overiders.checkin_sync.record_transactions"

@@ -1,25 +1,17 @@
 frappe.ui.form.on('Employee Referral', {
-    refresh(frm){
-     
-        // frappe.ui.form.ControlLink.link_options = function(link) {
-        //     console.log(link)
-        //     return [
-        //         {
-        //             html: "<span class='text-primary link-option'>"
-        //                 + "<i class='fa fa-pencil' style='margin-right: 5px;'></i> "
-        //                 + __("Other Option")
-        //                 + "</span>",
-        //             label: __("Other Option"),
-        //             value: "other__link_option",
-        //             action: () =>{
-        //                 frappe.ui.form.make_quick_entry("Designation")
+    refresh(frm) {
 
-        //             }
-        //         }
-        //     ];
-        // }
-        
-        
+        if (frm.is_new()) {
+            frappe.db.get_value('Employee', { user_id: frappe.session.user }, 'name', ({ name }) => {
+                frm.set_value('referrer', name);
+            });
+        }
+
+        frm.set_query("custom_current_designation", "hrms_custom.query_condition.designation_query");
+
+        frm.set_query("for_designation", "hrms_custom.query_condition.designation_query");
+
+
     }
 
 });

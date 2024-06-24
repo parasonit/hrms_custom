@@ -13,3 +13,7 @@ from hrms_custom.overrides import validate_duplicates
 
 JobRequisition.validate_duplicates = validate_duplicates
 
+
+from frappe.utils import response as _response
+from hrms_custom.overrides import download_private_file
+_response.download_private_file = download_private_file
