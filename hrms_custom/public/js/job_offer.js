@@ -17,13 +17,11 @@ frappe.ui.form.on("Job Offer", {
     },
 
     select_terms(frm) {
-        //can change order for better loading and opimizarin. need to check?
         resetFields(frm);
         loadTerms(frm);
         handleDesignation(frm);
 
     },
-    //need to check and remove this if not needed
     before_save(frm) {
         erpnext.utils.get_terms(frm.doc.select_terms, frm.doc, function (r) {
             if (!r.exc) {
@@ -33,10 +31,10 @@ frappe.ui.form.on("Job Offer", {
     },
     validate: function (frm) {
         if (frm.doc.custom_pincode) {
-            if (frm.doc.custom_pincode.toString().length != 5) {
+            if (frm.doc.custom_pincode.toString().length != 6) {
                 frappe.msgprint({
                     title: __('Validation Error'),
-                    message: __("Pincode must be a 5-digit number.")
+                    message: __("Pincode must be a 6-digit number.")
                 });
                 frappe.validated = false;
             }

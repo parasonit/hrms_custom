@@ -1,5 +1,8 @@
 frappe.ui.form.on('Job Requisition', {
     validate(frm) {
+
+        frm.doc.custom_employment_type != 'Contractual' && validateDescriptionFields(frm);
+
         if (frm.doc.custom_position_type === 'Replacement' && frm.doc.no_of_positions > 1) {
             frappe.validated = false;
             frappe.throw({
@@ -22,9 +25,9 @@ frappe.ui.form.on('Job Requisition', {
                     }
                 },
                 async: false,
-                callback: function(response) {
-                    if (response.message.length >0) {
-                        frappe.validated = false; 
+                callback: function (response) {
+                    if (response.message.length > 0) {
+                        frappe.validated = false;
 
                         frappe.throw({
                             title: __('Validation Error'),
@@ -40,6 +43,8 @@ frappe.ui.form.on('Job Requisition', {
 
     refresh(frm) {
 
+    frm.set_value("description",'description')     // Set default value for the description field to avoid mandatory error.
+
         customizeFileUploaderDialog(frm); // Customize file uploader dialog
         customizeDialogUploadOptions();
 
@@ -52,7 +57,7 @@ frappe.ui.form.on('Job Requisition', {
     },
     after_workflow_action(frm) {
         const status_map = {
-            'Approved by HR Manager':'Open & Approved',
+            'Approved by HR Manager': 'Open & Approved',
             'Approved by HR Head': 'Open & Approved',
             'Approved by Director': 'Open & Approved',
             'Rejected by HR Manager': 'Rejected',
@@ -64,15 +69,15 @@ frappe.ui.form.on('Job Requisition', {
         frm.set_value('status', status_map[frm.doc.workflow_state] || 'Pending');
         frm.save();
 
-        if (frm.doc.workflow_state === 'Approved'){
+        if (frm.doc.workflow_state === 'Approved') {
             frappe.call({
                 method: "hrms_custom.doc_events.make_job_opening",
                 args: {
                     source_name: frm.doc.name,
-                    designation:frm.doc.designation
+                    designation: frm.doc.designation
                 },
-                callback: function(r) {
-                    if(r.message) {
+                callback: function (r) {
+                    if (r.message) {
                         frappe.show_alert(r.message);
                     }
                 }
@@ -149,4 +154,29 @@ function customizeDialogUploadOptions() {
 
         setTimeout(() => observer.disconnect(), 500);
     });
+}
+
+function validateDescriptionFields(frm) {
+    const validationErrors = [
+        'custom_key_roles_and_responsibilities',
+        'custom_knowledge_requirement',
+        'custom_skill_requirement',
+        'custom_behavioral_requirement'
+    ]
+    .map(field => {
+        const fieldValue = frm.doc[field];
+        if (fieldValue && fieldValue.trim().length < 100) {
+            return `<b>${frm.get_field(field)._label}</b> must be at least 100 characters`;
+        }
+        return null; 
+    })
+    .filter(error => error !== null); 
+
+    if (validationErrors.length > 0) {
+        frappe.validated = false;
+        frappe.throw({
+            title: __('Validation Error'),
+            message: validationErrors.join('<br>')
+        });
+    }
 }

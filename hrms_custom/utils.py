@@ -50,7 +50,6 @@ def update_employee_documents():
             update_emp_letter, employee = employee, queue="long", enqueue_after_commit=True
         )
 
-
 def update_emp_letter(employee):
     if employee:
         doc = get_doc("Employee", employee)
@@ -82,20 +81,22 @@ def update_form_16(doc, form_16_path):
     form_16_files = os.listdir(form_16_path)
 
     for element in form_16_files:
-        random_file = main(filename=element, original_directory=form_16_path, type="form-16")
-        
-        if element.startswith(doc.pan_number+"_PARTB"):
+
+        if doc.pan_number and element.startswith(doc.pan_number+"_PARTB"):
             form_type = "PARTB"
-        elif element.startswith(doc.pan_number):
+        elif doc.pan_number and element.startswith(doc.pan_number):
             form_type = "FORM-16"
+        else:
+            continue
         
+        random_file = main(filename=element, original_directory=form_16_path, type="form-16")
         if random_file:
             doc.append("custom_form_16", {
                 'name1': random_file,
                 'year': current_year,
                 'type': form_type
             })
-
+    doc.flags.ignore_mandatory=True
     doc.save()
     frappe.db.commit()
     

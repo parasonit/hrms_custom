@@ -1,6 +1,8 @@
 frappe.ui.form.on("Employee", {
 	refresh: function (frm) {
 
+		setCannotAddDeleteRows(frm)
+	
 		handleRowButtons()
 		frm.set_query("department", function () {
 			return {
@@ -80,3 +82,16 @@ frappe.ui.form.on('Increment Letter', {
 		window.open(URL, "_blank");
     }
 });
+
+function setCannotAddDeleteRows(frm) {
+	 let fields = [
+        'custom_form_16',
+        'custom_increment_letter',
+        'custom_attached_documents'
+    ];
+	fields.forEach(field => {
+        frm.set_df_property(field, 'cannot_add_rows', 1);
+        frm.set_df_property(field, 'cannot_delete_rows', 1);
+    });
+
+}
