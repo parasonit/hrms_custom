@@ -5,6 +5,8 @@ from datetime import datetime
 from frappe.model.naming import make_autoname
 from frappe.model.mapper import get_mapped_doc
 from frappe.utils import get_url_to_form
+from frappe.utils.nestedset import get_descendants_of
+import json
 
 def update_attendance(doc, method):
     if doc.docstatus == 1:
@@ -266,3 +268,32 @@ def make_job_opening(source_name, designation, target_doc=None):
         except Exception as e:
             return {'message': f'Error creating job opening: {str(e)}'}
 
+
+
+@frappe.whitelist()
+def get_total_cost(designation, company, department=None):
+    company_set = get_descendants_of("Company", company) + [company]
+
+    sql_query = """
+        SELECT SUM(ctc)
+        FROM `tabEmployee`
+        WHERE designation = %s AND status = 'Active' AND company IN %s
+    """
+    
+    if department:
+        sql_query += " AND department = %s"
+        filters = (designation, tuple(company_set), department)
+    else:
+        filters = (designation, tuple(company_set))
+
+    total_cost = frappe.db.sql(sql_query, filters)[0][0] or 0
+
+    return total_cost
+
+
+
+@frappe.whitelist()
+def render_appointment_template( appt_template,doc):
+	doc = json.loads(doc) if isinstance(doc, str) else doc
+	template = frappe.get_doc("Appointment Letter Template",appt_template)
+	return frappe.render_template(template.custom_template_format, doc) if template.custom_template_format else ""

@@ -37,7 +37,9 @@ doctype_js = {
     "Employee": "public/js/employee.js",
     "Staffing Plan": "public/js/staffing_plan.js",
     "Job Requisition":"public/js/job_requisition.js",
-    "Employee Referral": "public/js/employee_referral.js"
+    "Employee Referral": "public/js/employee_referral.js",
+    "Appointment Letter": "public/js/appointment_letter.js"
+
 }
 doctype_list_js = {
     "Job Applicant" : "public/js/job_applicant_list.js",

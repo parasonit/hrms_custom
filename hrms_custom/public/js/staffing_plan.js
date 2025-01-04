@@ -65,6 +65,12 @@ frappe.ui.form.on('Staffing Plan', {
 				cur_dialog.hide();
 			}
 		});
+	},
+	total_estimated_budget(frm){
+        update_total_estimated_cost_of_department(frm);
+	},
+	custom_total_current_cost(frm){
+        update_total_estimated_cost_of_department(frm);
 	}
 });
 
@@ -73,12 +79,14 @@ frappe.ui.form.on('Staffing Plan Detail', {
 		let child = locals[cdt][cdn];
 		if(frm.doc.company && child.designation) {
 			set_number_of_positions(frm, cdt, cdn);
+			set_cost_of_current_count(frm,cdt,cdn)
 		}
 	},
 	custom_department: function(frm, cdt, cdn){
 		let child = locals[cdt][cdn];
 		if(frm.doc.company && child.designation && child.custom_department) {
 			set_number_of_positions(frm, cdt, cdn);
+			set_cost_of_current_count(frm,cdt,cdn)
 		}
 	},
 	vacancies: function(frm, cdt, cdn) {
@@ -87,6 +95,8 @@ frappe.ui.form.on('Staffing Plan Detail', {
 			frappe.throw(__("Vacancies cannot be lower than the current openings"));
 		}
 		set_number_of_positions(frm, cdt, cdn);
+		set_total_count(frm, cdt, cdn)
+		set_total_estimated_vacancies(frm,cdt,cdn)
 	},
 
 	current_count: function(frm, cdt, cdn) {
@@ -126,6 +136,8 @@ var set_number_of_positions = function(frm, cdt, cdn) {
 	});
 	refresh_field("staffing_details");
 	set_total_estimated_cost(frm, cdt, cdn);
+	set_total_count(frm, cdt, cdn);
+
 }
 
 // Note: Estimated Cost is calculated on number of Vacancies
@@ -150,4 +162,60 @@ var set_total_estimated_budget = function(frm) {
 		})
 		frm.set_value('total_estimated_budget', estimated_budget);
 	}
+};
+
+var set_cost_of_current_count = function (frm, cdt, cdn) {
+    let child = locals[cdt][cdn];
+
+    frappe.call({
+        method: "hrms_custom.doc_events.get_total_cost",
+        args: {
+            designation: child.designation,
+            company: frm.doc.company,
+            department: child.custom_department
+        },
+        callback: function (data) {
+            let cost = data.message || 0;
+            frappe.model.set_value(cdt, cdn, 'custom_cost_of_current_count', cost);
+            refresh_field("staffing_details");
+            set_total_current_cost(frm);
+        }
+    });
+};
+
+
+var set_total_count = function (frm, cdt, cdn) {
+    let child = locals[cdt][cdn];
+    let total_count = (child.vacancies || 0) + (child.current_count || 0);
+    frappe.model.set_value(cdt, cdn, 'custom_total_count', total_count);
+    set_total_current_count(frm);
+    refresh_field("staffing_details");
+};
+
+var set_total_current_cost = function (frm) {
+    let total_current_cost = (frm.doc.staffing_details || []).reduce((total, detail) => {
+        return total + (detail.custom_cost_of_current_count || 0);
+    }, 0);
+    frm.set_value('custom_total_current_cost', total_current_cost);
+};
+
+
+var set_total_estimated_vacancies = function (frm) {
+    let estimated_vacancies = (frm.doc.staffing_details || []).reduce((total, detail) => {
+        return total + (detail.vacancies || 0);
+    }, 0);
+    frm.set_value('custom_total_estimated_vacancies', estimated_vacancies);
+    refresh_field("staffing_details");
+};
+
+var set_total_current_count = function (frm) {
+    let total_current_count = (frm.doc.staffing_details || []).reduce((total, detail) => {
+        return total + (detail.custom_total_count || 0);
+    }, 0);
+    frm.set_value('custom_total_current_count', total_current_count);
+};
+
+var update_total_estimated_cost_of_department = function(frm) {
+    let total_estimated_cost_of_department = (frm.doc.total_estimated_budget || 0) + (frm.doc.custom_total_current_cost || 0);
+    frm.set_value("custom_total_estimated_cost_of_department", total_estimated_cost_of_department);
 };
