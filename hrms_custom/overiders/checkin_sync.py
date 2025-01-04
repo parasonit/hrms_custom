@@ -52,6 +52,13 @@ def record_transactions():
         except Exception as e:
             print(f"Error creating Employee Checkin: {str(e)}")
 
+    # Update the Shift Type with the last sync datetime
+    shift_types = frappe.get_all('Shift Type', filters={})
+    for shift_type in shift_types:
+        shift_doc = frappe.get_doc('Shift Type', shift_type.name)
+        shift_doc.last_sync_of_checkin = end_date
+        shift_doc.save()
+
     # Close the cursor and connection
     mycursor.close()
     sql_conn.close()

@@ -117,14 +117,17 @@ def mark_attendance_and_link_log(
 				attendance.save() 
 			except Exception as e:
 				frappe.log_error("overtime_attendance", e)
-			
-			if extra_work_benefits != 'Comp-Off' and not is_holiday(employee=employee, date=attendance_date):
+				
+			if extra_work_benefits != 'Overtime' and not is_holiday(employee=employee, date=attendance_date):
+				attendance.submit()
+				
+			if extra_work_benefits == 'Overtime' and not is_holiday(employee=employee, date=attendance_date):
 				get_overtime(attendance)
 				attendance.save()
 
-			if attendance.overtime_hours <= 0 :
-				attendance.submit()
-				
+				if attendance.overtime_hours <= 0 :
+					attendance.submit()
+					
 			if attendance_status == "Absent":
 				attendance.add_comment(
 					text=_("Employee was marked Absent for not meeting the working hours threshold.")
@@ -179,6 +182,7 @@ def update_attendance_in_checkins(log_names: list, attendance_id: str):
 	).run()
 
 def get_overtime(doc):
+	doc.overtime_hours = 0
 	if doc.shift and doc.working_hours:
 		
 		if doc.employment_type in ['Worker','Contractual','Staff']:

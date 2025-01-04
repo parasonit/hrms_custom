@@ -35,11 +35,18 @@ const addFieldEventListeners = frm => {
 const updateTemplateFieldsVisibility = frm => {
 	frappe.db.get_value('Appointment Letter Template', frm.doc.appointment_letter_template, 'custom_template_format', ({ custom_template_format }) => {
 		const requiredFields = new Set(custom_template_format.match(/\{\{(.*?)\}\}/g).map(match => match.replace(/\{\{|\}\}/g, '').trim()));
+		const conditionalFields = new Set(
+			(custom_template_format.match(/\{% if .*? %\}\{\{(.*?)\}\}\{% endif %\}/g) || []).map(match => match.match(/\{\{(.*?)\}\}/)[1].trim())
+		);
 		const fields = frm.fields_dict.custom__appointment_letter_terms.fields_dict;
 		Object.keys(fields).forEach(fieldName => {
 			const isRequired = requiredFields.has(fieldName);
 			frm.toggle_display(fieldName, isRequired);
-			frm.toggle_reqd(fieldName, isRequired);
+			if (!conditionalFields.has(fieldName)) {
+				frm.toggle_reqd(fieldName, isRequired);
+			}
+			// if (!isRequired) {frm.set_value(fieldName, '');}
+
 		});
 	});
 };

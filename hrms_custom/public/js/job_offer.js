@@ -1,107 +1,57 @@
 frappe.ui.form.on("Job Offer", {
-    onload_post_render(frm) {
-        Object.keys(frm.fields_dict.custom_job_offer_terms.fields_dict).forEach(fieldName => {
-            $('[data-fieldname="' + fieldName + '"]').on('change', function () {
-                erpnext.utils.get_terms(frm.doc.select_terms, frm.doc, function (r) {
-                    if (!r.exc) {
-                        frm.set_value("terms", r.message);
-                    }
-                });
-            });
-        });
+    onload_post_render: function (frm) {
+        addFieldEventListeners(frm);
+        frm.doc.select_terms && updateTemplateFieldsVisibility(frm);
     },
-    refresh(frm) {
-
-
-        loadTerms(frm);
-    },
-
     select_terms(frm) {
-        resetFields(frm);
-        loadTerms(frm);
-        handleDesignation(frm);
-
-    },
-    before_save(frm) {
-        erpnext.utils.get_terms(frm.doc.select_terms, frm.doc, function (r) {
-            if (!r.exc) {
-                frm.set_value("terms", r.message);
-            }
-        });
+        if (frm.doc.select_terms) {
+            updateTemplateFieldsVisibility(frm);
+            handleDesignation(frm);
+            updateJobOfferTemplate(frm);
+        } else {
+            hideAllFields(frm);
+        }
     },
     validate: function (frm) {
-        if (frm.doc.custom_pincode) {
-            if (frm.doc.custom_pincode.toString().length != 6) {
-                frappe.msgprint({
-                    title: __('Validation Error'),
-                    message: __("Pincode must be a 6-digit number.")
-                });
-                frappe.validated = false;
+        validatePincode(frm);
+    }
+})
+
+const addFieldEventListeners = frm => {
+    Object.keys(frm.fields_dict.custom_job_offer_terms.fields_dict).forEach(fieldName => {
+        $(`[data-fieldname="${fieldName}"]`).on('change', () => {
+            frm.doc.select_terms && updateJobOfferTemplate(frm);
+        });
+    });
+};
+
+const updateTemplateFieldsVisibility = frm => {
+    frappe.db.get_value('Terms and Conditions', frm.doc.select_terms, 'terms', ({ terms }) => {
+        const requiredFields = new Set(terms.match(/\{\{(.*?)\}\}/g).map(match => match.replace(/\{\{|\}\}/g, '').trim()));
+        const conditionalFields = new Set(
+            (terms.match(/\{% if .*? %\}\{\{(.*?)\}\}\{% endif %\}/g) || []).map(match => match.match(/\{\{(.*?)\}\}/)[1].trim())
+        );
+        Object.keys(frm.fields_dict.custom_job_offer_terms.fields_dict).forEach(fieldName => {
+            const isRequired = requiredFields.has(fieldName);
+            console.log(isRequired, fieldName)
+            frm.toggle_display(fieldName, isRequired);
+            if (!conditionalFields.has(fieldName)) {
+                frm.toggle_reqd(fieldName, isRequired);
             }
-        }
-    }
-});
-
-function resetFields(frm) {
-    const fieldsDict = frm.fields_dict.custom_job_offer_terms.fields_dict;
-    Object.keys(fieldsDict).forEach(fieldName => {
-        frm.set_df_property(fieldName, 'hidden', 1);
-        frm.set_df_property(fieldName, 'reqd', 0);
-    });
-}
-
-function loadTerms(frm) {
-    const { select_terms } = frm.doc;
-    if (!select_terms) return;
-
-
-    frappe.db.get_value('Terms and Conditions', select_terms, 'terms', ({ terms }) => {
-        const { normalFields, conditionalFields } = extractFieldNames(terms);
-
-        frm.set_df_property('custom_job_offer_terms', 'hidden', 0);
-
-        normalFields.forEach(fieldName => {
-            frm.set_df_property(fieldName, 'hidden', 0);
-            frm.set_df_property(fieldName, 'reqd', 1);
-        });
-
-        conditionalFields.forEach(fieldName => {
-            frm.set_df_property(fieldName, 'hidden', 0);
+            // if (!isRequired) {frm.set_value(fieldName, '');}
         });
     });
-}
+};
 
-function extractFieldNames(htmlString) {
-    const normalRegex = /\{\{(.*?)\}\}/g;
-    const conditionalRegex = /\{%\s*if\s*(.*?)\s*%\}.*?\{\{\s*(.*?)\s*\}\}/gs;
-
-    const normalFields = [];
-    const conditionalFields = [];
-
-    let match;
-    while ((match = normalRegex.exec(htmlString)) !== null) {
-        normalFields.push(match[1].trim());
-    }
-
-    let conditionalMatch;
-    while ((conditionalMatch = conditionalRegex.exec(htmlString)) !== null) {
-        const field = conditionalMatch[2].trim();
-        const index = normalFields.indexOf(field);
-        if (index !== -1) normalFields.splice(index, 1);
-        conditionalFields.push(field);
-    }
-
-    return { normalFields, conditionalFields };
-} 
-
-
-
+const hideAllFields = frm => {
+    Object.keys(frm.fields_dict.custom_job_offer_terms.fields_dict).forEach(fieldName => {
+        frm.toggle_display(fieldName, false);
+        frm.toggle_reqd(fieldName, false);
+    });
+};
 
 function handleDesignation(frm) {
     const { select_terms, designation } = frm.doc;
-
-    if (!select_terms) return;
-
     switch (select_terms) {
         case 'Offer Letter for Internship':
             frm.set_value("designation", 'Intern');
@@ -120,10 +70,22 @@ function handleDesignation(frm) {
         default:
             break;
     }
+}
 
-    erpnext.utils.get_terms(select_terms, frm.doc, function (r) {
+const updateJobOfferTemplate = frm => {
+    erpnext.utils.get_terms(frm.doc.select_terms, frm.doc, function (r) {
         if (!r.exc) {
             frm.set_value("terms", r.message);
         }
     });
-}
+};
+
+const validatePincode = frm => {
+    if (frm.doc.custom_pincode && frm.doc.custom_pincode.toString().length !== 6) {
+        frappe.msgprint({
+            title: __('Validation Error'),
+            message: __("Pincode must be a 6-digit number.")
+        });
+        frappe.validated = false;
+    }
+};

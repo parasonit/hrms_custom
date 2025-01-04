@@ -19,22 +19,23 @@ def update_attendance(doc, method):
         checkin_logs = frappe.db.sql(query, as_dict=1)
         frappe.log_error("update_attendance", checkin_logs)
         shift_doc = frappe.get_doc("Shift Type", doc.shift_type)
-        resp = custom_get_attendance(self=shift_doc, logs=checkin_logs)
-        if resp:
-            attendance = frappe.db.get_value('Attendance', {
-                'employee': doc.employee, 
-                'attendance_date': doc.from_date
-            }, 'name')
-            if attendance:
-                frappe.db.set_value('Attendance', attendance, {
-                    'status': resp[0],
-                    'total_working_hours': resp[1],
-                    'late_entry': resp[2],
-                    'early_exit': resp[3],
-                    'in_time': resp[4],
-                    'out_time': resp[5]
-                })
-                frappe.db.commit()
+        if checkin_logs:
+            resp = custom_get_attendance(self=shift_doc, logs=checkin_logs)
+            if resp: 
+                attendance = frappe.db.get_value('Attendance', {
+                    'employee': doc.employee, 
+                    'attendance_date': doc.from_date
+                }, 'name')
+                if attendance:
+                    frappe.db.set_value('Attendance', attendance, {
+                        'status': resp[0],
+                        'total_working_hours': resp[1],
+                        'late_entry': resp[2],
+                        'early_exit': resp[3],
+                        'in_time': resp[4],
+                        'out_time': resp[5]
+                    })
+                    frappe.db.commit()
 
 def update_user_permission(doc, method):
     if frappe.db.exists("Employee", doc.name):
@@ -297,3 +298,15 @@ def render_appointment_template( appt_template,doc):
 	doc = json.loads(doc) if isinstance(doc, str) else doc
 	template = frappe.get_doc("Appointment Letter Template",appt_template)
 	return frappe.render_template(template.custom_template_format, doc) if template.custom_template_format else ""
+
+
+def update_holiday_list_for_employees(doc,method):
+    old_doc = doc.get_doc_before_save()
+    if doc.holiday_list != old_doc.holiday_list:
+        employees = frappe.db.get_list('Employee',
+                                       filters={'default_shift': doc.name},
+                                       fields=['name']
+                                       )
+        for employee in employees:
+            frappe.db.set_value('Employee', employee.name, 'holiday_list', doc.holiday_list)
+      

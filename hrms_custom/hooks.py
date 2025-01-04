@@ -12,7 +12,7 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/hrms_custom/css/hrms_custom.css"
-# app_include_js = "/assets/hrms_custom/js/hrms_custom.js"
+app_include_js = "/assets/hrms_custom/js/hrms_custom.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/hrms_custom/css/hrms_custom.css"
@@ -51,6 +51,9 @@ doctype_list_js = {
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+website_route_rules = [
+	{"from_route": "/app/helpdesk", "to_route": "helpdesk"},
+]
 # Home Pages
 # ----------
 
@@ -194,6 +197,10 @@ doc_events = {
 	},
     "User": {
         "after_insert": "hrms_custom.doc_events.map_employee"
+	},
+    'Shift Type':{
+        "validate": "hrms_custom.doc_events.update_holiday_list_for_employees"
+        
 	}
 }
 
@@ -298,29 +305,9 @@ fixtures = [
     {"dt":"Custom Field","filters":[
         [
             "dt","in",[
-                "Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
-                "Income Tax Slab","Appraisal Template","Appraisal","Appraisal Template-custom_department",
-                "Shift Type","Holiday List", "Attendance Request-custom_approver", "Attendance Request-custom_approver_name",
-                "Appraisal-custom_self_appraisal_kra", "Appraisal-custom_approver","Appraisal Template Goal-custom_key_activity",
-            	"Appraisal-custom_is_final","Appraisal Goal-custom_key_activity","Appraisal Template-custom_designation",
-                "Appraisal-final_score-description", "Appraisal-custom_approver_name", "Appraisal-custom_total_self_score",
-                "Employee-custom_pms_eligibility", "Appraisal-custom_pms_eligibility", "Appraisal-custom_activities", 
-                "Appraisal-custom_total_activity_score", "Appraisal-custom_total_activity_self_score","Appraisal-custom_score_conversion",
-                "Appraisal-workflow_state","Appraisal Goal-custom_kras", "Job Opening-workflow_state","Job Opening-custom_employees_replacement",
-                "Job Opening-custom_no_of_position","Job Opening-custom_required_experience","Job Opening-custom_qualification",
-                "Job Opening-custom_grade","Job Opening-custom_reporting_manager","Job Opening-custom_salary","Job Opening-custom_minimum_salary",
-                "Job Opening-custom_column_break_rguxs","Job Opening-custom_maximum_salary","Job Opening-custom_open_on","Employee-custom_account_details",
-                "Employee-custom_column_break_tmpjf","Employee-custom_column_break_c8pfk","Employee-custom_sub_department",
-                "Employee-custom_column_break_ydtct","Employee-custom_column_break_q4cfo","Employee-custom_column_break_68t5f",
-                "Employee-custom_aadhaar_name","Employee-employment_type","Appraisal-custom_branch","Appraisal-main-field_order",
-                "Appraisal Template-workflow_state","Appraisal Template-custom_reporting_manager","Leave Policy Assignment-custom_leave_type_group",
-                "Job Offer-workflow_state","Appraisal Template-custom_employee","Employee-custom_company_mobile","Job Offer-custom_column_break_jk1xm",
-                "Job Offer-custom_reporting_manager","Job Offer-custom_working_location","Job Offer-custom_sim_card","Job Offer-custom_column_break_ntjgz",
-                "Job Offer-custom_mail_id","Job Offer-custom_mobile","Job Offer-custom_laptopdesktop","Job Offer-custom_assets_requirement","Job Offer-custom_interviewed_by",
-                "Job Offer-custom_ctc","Job Offer-custom_ctc","Job Offer-custom_other_details","Appraisal Template-custom_department",
-                "Appraisal Template-custom_column_break_x9jg9","Appraisal Template-custom_employee_name",
-                "Appraisal Template Goal-custom_bsc","Appraisal Template Goal-custom_target","Appraisal Template Goal-custom_achieved_percentage",
-                "Appraisal Template Goal-custom_metric","Appraisal Template Goal-custom_achieved","KRA-custom_metric"
+                "Salary Structure","Salary Structure Assignment","Salary Slip","Income Tax Slab","Appraisal","Shift Type",
+                "Holiday List","Attendance Request","Appraisal Goal","Job Opening","Employee","Leave Policy Assignment",
+                "Job Offer","Appraisal Template","Appraisal Template Goal","KRA"
             ]	
         ]
 	]
@@ -328,21 +315,9 @@ fixtures = [
 {"dt":"Property Setter","filters":[
 	[
 		"doc_type","in",[
-			"Employee","Salary Structure","Salary Structure Assignment","Salary Slip",
-			"Income Tax Slab","Appraisal Template","Appraisal","Shift Type", "Holiday List", 
-			"Appraisal-self_ratings-hidden", "Appraisal-section_break_23-label", "Appraisal-feedback_tab-hidden",
-			"Appraisal-total_score-description", "Appraisal Goal-score_earned-hidden", "Appraisal Goal-score-label",
-			"Appraisal Goal-kra-reqd", "Appraisal Goal-main-field_order", "Appraisal Goal-kra-columns", "Appraisal-self_appraisal_tab-depends_on",
-			"Appraisal-self_score-hidden", "Appraisal-self_appraisal_tab-label", "Appraisal-feedback_tab-label",
-			"Appraisal-feedback_tab-depends_on", "KRA-description-label","Appraisal Goal-kra-hidden","Appraisal Goal-kra-fetch_from",
-			"Appraisal Goal-kra-in_list_view","Appraisal Goal-main-field_order", "Job Opening-closes_on-hidden","Job Opening-status-hidden",
-            "Job Opening-closed_on-hidden","Job Opening-route-unique","Job Opening-status-in_standard_filter","Job Opening-job_title-in_list_view",
-            "Job Opening-description-in_list_view","Job Opening-designation-in_list_view","Job Opening-custom_open_on-in_list_view",
-            "Job Opening-custom_open_on-in_list_view","Job Opening-status-in_list_view","Job Opening-custom_no_of_position-in_list_view",
-            "Employee-micr_code-hidden","Employee-iban-hidden","Employee-main-field_order","Employee-column_break_heye-hidden",
-            "Employee-provident_fund_account-label","Job Applicant-status-options","Job Offer-workflow_state","Appraisal Template-rating_criteria-hidden",
-            "Appraisal Template Goal-key_result_area-columns","Appraisal Template Goal-per_weightage-width","Appraisal Template Goal-per_weightage-columns",
-            "Leave Policy Assignment-main-field_order","Employee-cell_number-label"
+			"Employee","Salary Structure","Salary Structure Assignment","Salary Slip","Income Tax Slab",
+            "Appraisal Template","Appraisal","Shift Type", "Holiday List","KRA","Appraisal Goal","Job Opening",
+            "Job Applicant","Job Offer","Appraisal Template Goal","Leave Policy Assignment"
 		]
 	]
 ]},
@@ -355,13 +330,13 @@ fixtures = [
 		]
 	]
 ]},
-{"dt": "Shift Type", "filters": [
-	[
-		"name", "in", [
-			"CMS","NS","FSS","FFS","TS","SS","FS","CG","FG",
-		]
-	]
-]},
+# {"dt": "Shift Type", "filters": [
+# 	[
+# 		"name", "in", [
+# 			"CMS","NS","FSS","FFS","TS","SS","FS","CG","FG",
+# 		]
+# 	]
+# ]},
 {"dt": "Income Tax Slab", "filters": [
 	[
 		"name", "in", [
