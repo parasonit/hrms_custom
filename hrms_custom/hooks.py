@@ -337,13 +337,13 @@ fixtures = [
 # 		]
 # 	]
 # ]},
-{"dt": "Income Tax Slab", "filters": [
-	[
-		"name", "in", [
-			"New Regime Individual","Old Regime Super Senior Citizen","Old Regime Individual","Old Regime Senior Citizen",
-		]
-	]
-]},
+# {"dt": "Income Tax Slab", "filters": [
+# 	[
+# 		"name", "in", [
+# 			"New Regime Individual","Old Regime Super Senior Citizen","Old Regime Individual","Old Regime Senior Citizen",
+# 		]
+# 	]
+# ]},
 {"dt": "Salary Component", "filters": [
 	[
 		"name", "in", [
