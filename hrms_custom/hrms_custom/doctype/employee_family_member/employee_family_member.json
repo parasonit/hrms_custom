@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-14 10:56:41.037310",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "family_member_name",
+  "date_of_birth",
+  "cpf_family_member",
+  "relation_of_family_member"
+ ],
+ "fields": [
+  {
+   "fieldname": "family_member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Family Member Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "cpf_family_member",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CPF Family member",
+   "translatable": 1
+  },
+  {
+   "fieldname": "relation_of_family_member",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relation of Family member",
+   "translatable": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-14 11:06:57.393438",
+ "modified_by": "Administrator",
+ "module": "Hrms Custom",
+ "name": "Employee Family member",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
