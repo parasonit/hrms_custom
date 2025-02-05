@@ -46,9 +46,10 @@ def update_employee_documents():
     # update_emp_letter(employee="PMI-1383")
 
     for employee in active_employees:
-        frappe.enqueue(
-            update_emp_letter, employee = employee, queue="long", enqueue_after_commit=True
-        )
+        update_emp_letter(employee=employee)
+        # frappe.enqueue(
+        #     update_emp_letter, employee = employee, queue="long", enqueue_after_commit=True
+        # )
 
 def update_emp_letter(employee):
     if employee:
@@ -58,7 +59,7 @@ def update_emp_letter(employee):
         increment_letter_path = get_site_path('private', 'files', 'employee_letter', str(current_year), 'increment_letter')
 
         # Update form 16 files
-        update_form_16(doc, form_16_path)
+        # update_form_16(doc, form_16_path)
 
         # Update increment letter files
         update_increment_letter(doc, increment_letter_path)
