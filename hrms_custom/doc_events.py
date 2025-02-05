@@ -310,3 +310,24 @@ def update_holiday_list_for_employees(doc,method):
         for employee in employees:
             frappe.db.set_value('Employee', employee.name, 'holiday_list', doc.holiday_list)
       
+def update_job_opening_status(doc, method):
+    query = """
+        SELECT jo.name AS job_opening, COUNT(ja.name) AS total_accepted_applicants
+        FROM `tabJob Opening` jo
+        LEFT JOIN `tabJob Applicant` ja ON jo.name = ja.job_title
+        WHERE ja.status = 'Accepted'
+        AND ja.name IN (
+            SELECT te.job_applicant
+            FROM `tabEmployee` te
+        )
+        GROUP BY jo.name;
+    """
+
+    data = frappe.db.sql(query, as_dict=1)
+    for jo in data:
+        if jo.get('job_opening'):
+            total_vacancies = frappe.db.get_value("Job Opening", jo.get('job_opening'), "vacancies")
+            if total_vacancies == jo.get('total_accepted_applicants'):
+                frappe.db.set_value('Job Opening', jo.get('job_opening'), 'status', 'Closed')
+                frappe.db.commit()
+

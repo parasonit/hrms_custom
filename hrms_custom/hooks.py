@@ -169,7 +169,8 @@ doc_events = {
             "hrms_custom.doc_events.validate_uan",
             "hrms_custom.doc_events.validate_pf",
             # "hrms_custom.doc_events.calculate_age"
-        ]
+        ],
+        "after_insert": "hrms_custom.doc_events.update_job_opening_status"
 	},
     # "Job Opening": {
     #     "validate": [
@@ -200,7 +201,6 @@ doc_events = {
 	},
     'Shift Type':{
         "validate": "hrms_custom.doc_events.update_holiday_list_for_employees"
-        
 	}
 }
 
